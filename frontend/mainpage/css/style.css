@@ -65,7 +65,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  height: 60px;
+  min-height: 100px;
 }
 
 .header__logo {
