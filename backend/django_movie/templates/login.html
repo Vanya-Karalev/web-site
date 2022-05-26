@@ -1,5 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -12,8 +13,8 @@
         crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="{% static 'authorization/auth.css' %}" />
+    <script src="{% static 'authorization/auth.js' %}" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet" />
@@ -32,14 +33,17 @@
 
     <header>
         <ul class="navigation">
-            <li><a href="#" class="babidgon">Babidgon</a></li>
+            <li><a href="{% url 'index' %}" class="babidgon">Babidgon</a></li>
         </ul>
         <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">Profile</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'index' %}">Movies</a></li>
+        <li><a href="{% url 'login' %}">Log in</a></li>
+        {% if request.user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Profile</a></li>
             <li><a href="#">My tickets</a></li>
-            <li><a href="#">Log out</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% endif %}
         </ul>
         <div class="search">
             <input type="text" placeholder="Search">
@@ -47,25 +51,53 @@
         </div>
     </header>
 
-    <div class="body-container">
+
+     <div class="body-container">
         <div class="container">
             <h1>Login</h1>
-            <form>
-                <div class="form-control-auth">
-                    <input type="text" required>
-                    <label>Email</label>
+             <form method="POST">
+                 {%csrf_token%}
+                 <div class="form-control-auth">
+                    <input type="text" name="username" required>
+                    <label>Login</label>
                 </div>
                 <div class="form-control-auth">
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
-
-                <button class="btn">Login</button>
+                 <button class="btn">Login</button>
             </form>
-
-            <p>Don't have an account? <a href="../registration/registration.html">Register</a> </p>
+            {%if messages%}
+                {%for message in messages%}
+                    <div class="alert alert-{{message.tags}}">
+                         {{message}}
+                    </div>
+                {%endfor%}
+            {%endif%}
+            <p>Don't have an account? <a href="{% url 'registration' %}">Registration</a> </p>
         </div>
     </div>
+
+
+{#    <div class="body-container">#}
+{#        <div class="container">#}
+{#            <h1>Login</h1>#}
+
+{#            <form>#}
+{#                <div class="form-control-auth">#}
+{#                    <input type="text" required>#}
+{#                    <label>Email</label>#}
+{#                </div>#}
+{#                <div class="form-control-auth">#}
+{#                    <input type="password" required>#}
+{#                    <label>Password</label>#}
+{#                </div>#}
+{##}
+{#                <button class="btn">Login</button>#}
+{#            </form>#}
+{#            <p>Don't have an account? <a href="{% url 'registration' %}">Registration</a> </p>#}
+{#        </div>#}
+{#    </div>#}
 
     <footer class="footer">
         <div class="foot-container">
@@ -86,9 +118,3 @@
 </body>
 
 </html>
-
-<!-- <form metod="POST">
-    {{% csrf_token %}}
-    {{form.as_p}}
-    <input type="submit" value="Login">
-</form> -->

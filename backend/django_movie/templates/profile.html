@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +13,8 @@
         crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="profile.css" />
-    <script src="profile.js" defer></script>
+    <link rel="stylesheet" href="{% static 'profile/profile.css' %}" />
+    <script src="{% static 'profile/profile.js' %}" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet" />
@@ -32,14 +33,17 @@
 
     <header>
         <ul class="navigation">
-            <li><a href="#" class="babidgon">Babidgon</a></li>
+            <li><a href="{% url 'index' %}" class="babidgon">Babidgon</a></li>
         </ul>
         <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">Profile</a></li>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'index' %}">Movies</a></li>
+        <li><a href="{% url 'login' %}">Log in</a></li>
+        {% if request.user.is_authenticated %}
+            <li><a href="{% url 'profile' %}">Profile</a></li>
             <li><a href="#">My tickets</a></li>
-            <li><a href="#">Log out</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% endif %}
         </ul>
         <div class="search">
             <input type="text" placeholder="Search">
@@ -84,26 +88,10 @@
                                 <input id="INPUT_23" />
                             </div>
                         </div>
-                        <div id="DIV_24">
-                            <div id="DIV_25">
-                                <div id="DIV_26">
-                                    Отчество
-                                </div>
-                                <input id="INPUT_27" />
-                            </div>
-                        </div>
                         <div id="DIV_225">
                             <div id="DIV_226">
                                 <div id="DIV_227">
                                     Email
-                                </div>
-                                <input id="INPUT_228" />
-                            </div>
-                        </div>
-                        <div id="DIV_225">
-                            <div id="DIV_226">
-                                <div id="DIV_227">
-                                    Age
                                 </div>
                                 <input id="INPUT_228" />
                             </div>
@@ -178,7 +166,7 @@
                                   </div>
                                   <div class="barcode"></div>
                                 </div>
-                              
+
                               </div>
                               <div class="cardWrap">
                                 <div class="card cardLeft">
@@ -210,7 +198,7 @@
                                   </div>
                                   <div class="barcode"></div>
                                 </div>
-                              
+
                               </div>
                               <!-- <div class="cardWrap">
                                 <div class="card cardLeft">

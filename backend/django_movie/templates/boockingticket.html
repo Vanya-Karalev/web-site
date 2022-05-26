@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +13,8 @@
         crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="boockingticket.js" defer></script>
+    <link rel="stylesheet" href="{% static 'boockingticket/boockingticket.css' %}" />
+    <script src="{% static 'boockingticket/boockingticket.js' %}" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet" />
@@ -32,14 +33,17 @@
 
     <header>
         <ul class="navigation">
-            <li><a href="../index.html" class="babidgon">Babidgon</a></li>
+            <li><a href="{% url 'index' %}" class="babidgon">Babidgon</a></li>
         </ul>
         <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">My tickets</a></li>
-            <li><a href="#">Log out</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'index' %}">Movies</a></li>
+            <li><a href="{% url 'login' %}">Log in</a></li>
+            {% if request.user.is_authenticated %}
+                <li><a href="{% url 'profile' %}">Profile</a></li>
+                <li><a href="#">My tickets</a></li>
+                <li><a href="{% url 'logout' %}">Log out</a></li>
+            {% endif %}
         </ul>
         <div class="search">
             <input type="text" placeholder="Search">
@@ -55,12 +59,6 @@
             <br>
             <label id="date">25.05.2022 </label>
             <label id="time">12:25 </label>
-            <!-- <select id="movie">
-                <option value="10">Avengers: Endgame ($10)</option>
-                <option value="12">Joker: ($12)</option>
-                <option value="8">Toy Story 4 ($8)</option>
-                <option value="9">The Lion King ($9)</option>
-            </select> -->
         </div>
 
         <ul class="myshowcase">
@@ -147,6 +145,13 @@
             You have selected <span id="count">0</span> seats to see
             <span id="movie-Name"></span> for a price of span $<span id="total">0</span>
         </p>
+
+        {% if request.user.is_authenticated %}
+        <div class="buttons">
+            <button type="button" id="but" class="btn btn-primary btn-lg">Buy</button>
+            <button type="button" class="btn btn-primary btn-lg">Book</button>
+        </div>
+        {% endif %}
     </div>
 
     <footer class="footer">

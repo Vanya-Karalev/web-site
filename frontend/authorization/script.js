@@ -1,4 +1,4 @@
-const labels = document.querySelectorAll('.form-control label');
+const labels = document.querySelectorAll('.form-control-auth label');
 
 labels.forEach(label => {
     console.log(label)

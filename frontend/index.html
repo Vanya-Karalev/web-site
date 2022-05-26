@@ -13,52 +13,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main/style.css" />
+    <script src="main/script.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Babidgon</title>
 </head>
 
-<body>
-    <header class="container">
-        <div class="header__content">
-            <a href="index.html" class="header__logo">Babidgon</a>
-            <form>
-                <input type="text" class="header__search" placeholder="Что вы ищете?" />
-            </form>
-            <a href="authorization/authorization.html" class="header__input">Войти</a>
-        </div>
-    </header>
-
-    <div class="first__container container">
-        <div class="panel active"
-            style="background-image: url('https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg');">
-            <h3>Explore The World</h3>
-        </div>
-
-        <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-            <h3>Wild Forest</h3>
-        </div>
-
-        <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');">
-            <h3>Sunny Beach</h3>
-        </div>
-
-        <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');">
-            <h3>City on Nature</h3>
-        </div>
-
-        <div class="panel"
-            style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
-            <h3>Mountains - Clouds</h3>
-        </div>
+<header>
+    <ul class="navigation">
+        <li><a href="#" class="babidgon">Babidgon</a></li>
+    </ul>
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">My tickets</a></li>
+        <li><a href="#">Log out</a></li>
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
     </div>
+</header>
 
+<body>
     <div class="container">
+        <div class="row">
+            <p class="text" style="color: white; font-size: 32px;">Now Showing</p>
+            <br>
+            <br>
+        </div>
         <div class="movies">
             <div class="row">
+                <p class="text" style="color: white; font-size: 24px;">Now Showing</p>
                 <div class="example-2 card">
                     <div class="wrapper">
                         <div class="data">
@@ -84,7 +78,7 @@
                                     release
                                     of
                                     the Survive soundtrack, out today.</p>
-                                    <a href="movieinfo/movieinfo.html" class="button">More info</a>
+                                <a href="movieinfo/movieinfo.html" class="button">More info</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +93,7 @@
                                     release
                                     of
                                     the Survive soundtrack, out today.</p>
-                                    <a href="movieinfo/movieinfo.html" class="button">More info</a>
+                                <a href="movieinfo/movieinfo.html" class="button">More info</a>
                             </div>
                         </div>
                     </div>
@@ -134,10 +128,83 @@
                         </div>
                     </div>
                 </div>
+                <div class="example-2 card">
+                    <div class="wrapper" id="image">
+                        <div class="data">
+                            <div class="content">
+                                <span class="author">Jane Doe</span>
+                                <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
+                                    release
+                                    of
+                                    the Survive soundtrack, out today.</p>
+                                <a href="movieinfo/movieinfo.html" class="button">More info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example-2 card">
+                    <div class="wrapper" id="image">
+                        <div class="data">
+                            <div class="content">
+                                <span class="author">Jane Doe</span>
+                                <h1 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
+                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
+                                    release
+                                    of
+                                    the Survive soundtrack, out today.</p>
+                                <a href="movieinfo/movieinfo.html" class="button">More info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="main/script.js"></script>
 </body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><a href="#">about us</a></li>
+  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">privacy policy</a></li>
+  	 				<li><a href="#">affiliate program</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="#">shipping</a></li>
+  	 				<li><a href="#">returns</a></li>
+  	 				<li><a href="#">order status</a></li>
+  	 				<li><a href="#">payment options</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><a href="#">watch</a></li>
+  	 				<li><a href="#">bag</a></li>
+  	 				<li><a href="#">shoes</a></li>
+  	 				<li><a href="#">dress</a></li>
+  	 			</ul>
+  	 		</div> -->
+            <div class="footer-col">
+                <h4>follow me</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>
