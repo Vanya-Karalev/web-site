@@ -13,8 +13,9 @@
         crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'main/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'main/style.css' %}"/>
     <script src="{% static 'main/script.js' %}" defer></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
@@ -34,11 +35,16 @@
     <ul class="navigation">
         <li><a href="{% url 'index' %}">Home</a></li>
         <li><a href="{% url 'index' %}">Movies</a></li>
-        <li><a href="{% url 'login' %}">Log in</a></li>
+        {% if not request.user.is_authenticated %}
+            <li><a href="{% url 'login' %}">Log in</a></li>
+        {% endif %}
         {% if request.user.is_authenticated %}
             <li><a href="{% url 'profile' %}">Profile</a></li>
             <li><a href="#">My tickets</a></li>
             <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% endif %}
+        {% if request.user.is_superuser %}
+            <li><a href="admin/">Admin panel</a></li>
         {% endif %}
     </ul>
     <div class="search">
@@ -50,13 +56,10 @@
 <body>
     <div class="container">
         <div class="row">
-            <p class="text" style="color: white; font-size: 32px;">Now Showing</p>
-            <br>
-            <br>
+            <p class="text" style="color: white; font-size: 28px;padding-top: 120px;">Now Showing</p>
         </div>
         <div class="movies">
             <div class="row">
-                <p class="text" style="color: white; font-size: 24px;">Now Showing</p>
 
                 {%if messages%}
                     {%for message in messages%}
@@ -66,111 +69,114 @@
                     {%endfor%}
                 {%endif%}
 
-                <div class="example-2 card">
-                    <div class="wrapper">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
+                {% for movie in movie_list %}
+                    <div class="example-2 card">
+                        <div class="wrapper" style="background: url({{movie.poster}}) center / cover no-repeat;">
+                            <div class="data">
+                                <div class="content">
+{#                                    <span class="author">Jane Doe</span>#}
+                                        <h1 class="title"><a href="{% url 'movieinfo' movie_id=movie.id %}">{{ movie.title }}</a></h1>
+                                    <p class="text">{{ movie.small_description}}...</p>
+                                    <a href="{% url 'movieinfo' movie_id=movie.id %}" class="button">More info</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="example-2 card">
-                    <div class="wrapper">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="example-2 card">
-                    <div class="wrapper">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="example-2 card">
-                    <div class="wrapper">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="example-2 card">
-                    <div class="wrapper" id="image">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="example-2 card">
-                    <div class="wrapper" id="image">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="example-2 card">
-                    <div class="wrapper" id="image">
-                        <div class="data">
-                            <div class="content">
-                                <span class="author">Jane Doe</span>
-                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital
-                                    release
-                                    of
-                                    the Survive soundtrack, out today.</p>
-                                <a href="{% url 'movieinfo' %}" class="button">More info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{#                    <style>#}
+{#                    .example-2 .wrapper {#}
+{#                        background: url({{movie.poster}}) center / cover no-repeat;}#}
+{#                    </style>#}
+                {% endfor %}
+{#                <div class="example-2 card">#}
+{#                    <div class="wrapper">#}
+{#                        <div class="data">#}
+{#                            <div class="content">#}
+{#                                <span class="author">Jane Doe</span>#}
+{#                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>#}
+{#                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital#}
+{#                                    release#}
+{#                                    of#}
+{#                                    the Survive soundtrack, out today.</p>#}
+{#                                <a href="{% url 'movieinfo' %}" class="button">More info</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="example-2 card">#}
+{#                    <div class="wrapper">#}
+{#                        <div class="data">#}
+{#                            <div class="content">#}
+{#                                <span class="author">Jane Doe</span>#}
+{#                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>#}
+{#                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital#}
+{#                                    release#}
+{#                                    of#}
+{#                                    the Survive soundtrack, out today.</p>#}
+{#                                <a href="{% url 'movieinfo' %}" class="button">More info</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="example-2 card">#}
+{#                    <div class="wrapper">#}
+{#                        <div class="data">#}
+{#                            <div class="content">#}
+{#                                <span class="author">IMDb:7.8</span>#}
+{#                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>#}
+{#                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital#}
+{#                                    release#}
+{#                                    of#}
+{#                                    the Survive soundtrack, out today.</p>#}
+{#                                <a href="{% url 'movieinfo' %}" class="button">More info</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="example-2 card">#}
+{#                    <div class="wrapper" id="image">#}
+{#                        <div class="data">#}
+{#                            <div class="content">#}
+{#                                <span class="author">Jane Doe</span>#}
+{#                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>#}
+{#                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital#}
+{#                                    release#}
+{#                                    of#}
+{#                                    the Survive soundtrack, out today.</p>#}
+{#                                <a href="{% url 'movieinfo' %}" class="button">More info</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="example-2 card">#}
+{#                    <div class="wrapper" id="image">#}
+{#                        <div class="data">#}
+{#                            <div class="content">#}
+{#                                <span class="author">Jane Doe</span>#}
+{#                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>#}
+{#                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital#}
+{#                                    release#}
+{#                                    of#}
+{#                                    the Survive soundtrack, out today.</p>#}
+{#                                <a href="{% url 'movieinfo' %}" class="button">More info</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="example-2 card">#}
+{#                    <div class="wrapper" id="image">#}
+{#                        <div class="data">#}
+{#                            <div class="content">#}
+{#                                <span class="author">Jane Doe</span>#}
+{#                                <h1 class="title"><a href="{% url 'movieinfo' %}">Stranger Things: The sound of the Upside Down</a></h1>#}
+{#                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital#}
+{#                                    release#}
+{#                                    of#}
+{#                                    the Survive soundtrack, out today.</p>#}
+{#                                <a href="{% url 'movieinfo' %}" class="button">More info</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
         </div>
     </div>

@@ -58,14 +58,14 @@
                     <div class="rows">
                         <div class="event-page__left">
                             <picture class="poster">
-                                <img src="https://abws.bycard.by/uploads/events/thumbs/300x430/8wt7aR4Xg.jpg">
+                                <img src={{ movie.poster }}>
                             </picture>
                         </div>
 
                         <div class="event-page__right column">
                             <div class="rows jc-sb">
                                 <div class="event-page__header">
-                                    <h1>Анчартед: на картах не значится</h1>
+                                    <h1>{{ movie.title }}</h1>
                                 </div>
                                 <div class="event-page__shortcuts">
                                 </div>
@@ -73,12 +73,12 @@
                             <div class="row table-about">
                                 <div class="table-about__box">
                                     <div class="table-about__header">Даты показа:</div>
-                                    <div class="table-about__text"><span>17 мая - 25 мая</span>
+                                    <div class="table-about__text"><span>{{ movie.start_date}} - {{ movie.end_date}}</span>
                                     </div>
                                 </div>
                                 <div class="table-about__box">
                                     <div class="table-about__header">Длительность:</div>
-                                    <div class="table-about__text">115 мин.</div>
+                                    <div class="table-about__text">{{ movie.movie_length }} мин.</div>
                                 </div>
                                 <div class="table-about__box">
                                     <div class="table-about__header">Жанр:</div>
@@ -87,12 +87,12 @@
                                 </div>
                                 <div class="table-about__box">
                                     <div class="table-about__header">Стоимость:</div>
-                                    <div class="table-about__text">до 31.00р.
+                                    <div class="table-about__text">{{ movie.price}}р.
                                     </div>
                                 </div>
                                 <div class="table-about__box">
                                     <div class="table-about__header">Возрастные ограничения:</div>
-                                    <div class="table-about__text">12+</div>
+                                    <div class="table-about__text">{{ movie.category }}</div>
                                 </div>
                             </div>
 
@@ -107,36 +107,30 @@
                             </form>
 
 
-{#                            <div class="mybutton">#}
-{#                                <a href="{% url 'boockingticket' %}"><span>12:25</span></a>#}
-{#                                <a href="{% url 'boockingticket' %}"><span>14:20</span></a>#}
-{#                                <a href="{% url 'boockingticket' %}"><span>15:45</span></a>#}
-{#                                <a href="{% url 'boockingticket' %}"><span>17:40</span></a>#}
-{#                            </div>#}
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                              <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked>12:25
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off">14:20
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option3" autocomplete="off">15:45
-                              </label>
-                              <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option3" autocomplete="off">17:40
-                              </label>
+                            <div class="mybutton">
+                                <a href="{% url 'boockingticket' %}"><span>12:25</span></a>
+                                <a href="{% url 'boockingticket' %}"><span>14:20</span></a>
+                                <a href="{% url 'boockingticket' %}"><span>15:45</span></a>
+                                <a href="{% url 'boockingticket' %}"><span>17:40</span></a>
                             </div>
 
+{#                            <div class="btn-group btn-group-toggle" data-toggle="buttons">#}
+{#                              <label class="btn btn-secondary active">#}
+{#                                <input type="radio" name="options" id="option1" autocomplete="off" checked>12:25#}
+{#                              </label>#}
+{#                              <label class="btn btn-secondary">#}
+{#                                <input type="radio" name="options" id="option2" autocomplete="off">14:20#}
+{#                              </label>#}
+{#                              <label class="btn btn-secondary">#}
+{#                                <input type="radio" name="options" id="option3" autocomplete="off">15:45#}
+{#                              </label>#}
+{#                              <label class="btn btn-secondary">#}
+{#                                <input type="radio" name="options" id="option3" autocomplete="off">17:40#}
+{#                              </label>#}
+{#                            </div>#}
+
                             <div class="event-page__description">
-                                <p style="text-align:justify"><br>В центре сюжета &ndash; история о том,
-                                    как смекалистый Нейтан Дрейк (Том Холланд) отправляется в свое
-                                    первое путешествие в поисках сокровищ с хитроумным Виктором
-                                    Салли&raquo; Салливаном (Марк Уолберг). Вместе им предстоит
-                                    приоткрыть завесу над одной из величайших тайн в истории и
-                                    разгадать загадку исчезновения брата Нейтана. Фильм основан на
-                                    одной из самых продаваемых в мире и высоко оценённых критиками
-                                    компьютерных игр всех времен.</p>
+                                <p style="text-align:justify"><br>{{ movie.description}}.</p>
                             </div>
 
 
