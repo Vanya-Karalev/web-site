@@ -10,7 +10,7 @@ class UserRegisterForm(UserCreationForm):
     first_name = forms.CharField(label='First name', widget=forms.TextInput(attrs={'class': 'form-input'}))
     last_name = forms.CharField(label='Last name', widget=forms.TextInput(attrs={'class': 'form-input'}))
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-input'}))
-    password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput(attrs={'class': 'form-input'}))
+    password2 = forms.CharField(label='Repeat_Password', widget=forms.PasswordInput(attrs={'class': 'form-input'}))
 
     class Meta:
         model = User

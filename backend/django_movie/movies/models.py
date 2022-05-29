@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Genre(models.Model):
-    name = models.CharField(default='', max_length=50)
+    name = models.CharField(null=True, blank=True, max_length=50)
 
     def __str__(self):
         return self.name
@@ -26,20 +26,38 @@ class Movie(models.Model):
 
 
 class Comment(models.Model):
-    user = models.CharField('User name', default='', max_length=250)
-    movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
-    comment = models.TextField(default='')
-    created = models.DateTimeField(auto_now_add=True)
+    user = models.CharField('User name', null=True, blank=True, max_length=250)
+    movie = models.ForeignKey('Movie', related_name="comments", on_delete=models.CASCADE)
+    content = models.TextField(null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.user
+        return 'Comment by {} on {}'.format(self.user, self.movie)
+
+
+class Seat(models.Model):
+    seat = models.PositiveIntegerField('Seat', null=True, blank=True)
+
+    def __str__(self):
+        return self.seat
 
 
 class Ticket(models.Model):
-    user = models.CharField('User name', default='', max_length=250)
+    user_name = models.CharField('User name', null=True, blank=True, max_length=250)
+    user_login = models.CharField('User login', null=True, blank=True, max_length=250)
     movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
-    time = models.DateTimeField('Movie date and time', default=None)
-    seat = models.PositiveIntegerField('Seat', default=0)
+    date = models.DateField('Date of movie', null=True, blank=True)
+    time = models.DateTimeField('Movie date and time', null=True, blank=True)
+    seats = models.ManyToManyField(Seat, related_name='seats')
+    seat_count = models.PositiveIntegerField('Seat count', null=True, blank=True)
+    type = models.CharField('Ticket type', null=True, blank=True, max_length=100)
 
     def __str__(self):
         return self.movie
+
+
+# class Times(models.Model):movie_id=movie.id
+#     date = models.TimeField('Times', null=True, blank=True, max_length=100)
+#
+#     def __str__(self):
+#         return self.date
