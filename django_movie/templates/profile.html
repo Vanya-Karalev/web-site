@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static 'profile/profile.css' %}" />
+    <script src="{% static 'profile/profile.js' %}" defer></script>
+{% endblock styles %}
+
+{% block content%}
+<body>
+    <div class="body-container">
+        <div id="DIV_233">
+            Личный кабинет
+        </div>
+        {%if messages%}
+            {%for message in messages%}
+                <div class="alert alert-{{message.tags}}">
+                     {{message}}
+                </div>
+            {%endfor%}
+        {%endif%}
+        <div id="DIV_1">
+            <div id="DIV_2">
+                <div id="DIV_3">
+                    <picture id="PICTURE_4">
+                        <img src="https://my.bycard.by/img/user-ico.937b09de.png" id="IMG_5" alt='' />
+                    </picture>
+                </div>
+                <div id="DIV_6">
+                    <a href="#" id="A_7" class="myTicketsButton">Мои билеты<span id="SPAN_8">0</span></a>
+                    <a href="#" id="A_11" class="profileButton">Профиль</a>
+                </div>
+            </div>
+            <form method="POST">
+                {%csrf_token%}
+                <div id="DIV_13">
+                    <div id="DIV_14">
+                        <div id="DIV_15">
+                            <div id="DIV_16">
+                                <div id="DIV_17">
+                                    <div id="DIV_18" style="font-size: 18px">
+                                        Имя
+                                    </div>
+                                    {{u_form.first_name}}
+                                </div>
+                            </div>
+                            <div id="DIV_20">
+                                <div id="DIV_21">
+                                    <div id="DIV_22" style="font-size: 18px">
+                                        Фамилия
+                                    </div>
+                                    {{u_form.last_name}}
+                                </div>
+                            </div>
+                            <div id="DIV_225">
+                                <div id="DIV_226">
+                                    <div id="DIV_227" style="font-size: 18px">
+                                        Email
+                                    </div>
+                                    {{u_form.email}}
+                                </div>
+                            </div>
+                            {{ form.errors }}
+                            <div id="DIV_229">
+                                <div id="DIV_230">
+                                    <div id="DIV_231">
+                                        <button id="BUTTON_232" type="submit">
+                                            Сохранить данные
+                                        </button>
+                                        <button id="BUTTON_232" style="background-color: red">
+                                            Delete account
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div id="DIV_256">
+
+                <div id="DIV_236">
+                    <div id="DIV_237">
+                        <div id="DIV_238">
+                            <div id="DIV_239">
+                                <a id="A_20" class="actually">Актуальные</a><a id="A_21" class="booked">Забронировано</a><a id="A_22" class="archive">Архив</a>
+                            </div>
+                        </div>
+                        <div id="DIV_240">
+
+                            <div id="DIV_241">
+                                <div id="DIV_242">
+                                    <div id="DIV_243">
+                                        <div id="DIV_244">
+                                            <i id="I_20"></i>
+                                            <div id="DIV_245">
+                                                У вас нет актуальных билетов.
+                                            </div>
+                                        </div>
+                                        <button id="BUTTON_15">
+                                            Перейти к афише
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cardWrap">
+                                <div class="card cardLeft">
+                                  <h1>Startup <span>Cinema</span></h1>
+                                  <div class="title">
+                                    <h2>How I met your Mother</h2>
+                                    <span>movie</span>
+                                  </div>
+                                  <div class="name">
+                                    <h2>Vladimir Kudinov</h2>
+                                    <span>name</span>
+                                  </div>
+                                    <div class="seatAndTime">
+                                        <div class="seat">
+                                            <h2>156</h2>
+                                            <span>seat</span>
+                                        </div>
+                                        <div class="time">
+                                            <h2>12:00</h2>
+                                            <span>time</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card cardRight">
+                                  <div class="eye"></div>
+                                  <div class="number">
+                                    <h3>156</h3>
+                                    <span>seat</span>
+                                  </div>
+                                  <div class="barcode"></div>
+                                </div>
+
+                              </div>
+                              <div class="cardWrap">
+                                <div class="card cardLeft">
+                                  <h1>Startup <span>Cinema</span></h1>
+                                  <div class="title">
+                                    <h2>How I met your Mother</h2>
+                                    <span>movie</span>
+                                  </div>
+                                  <div class="name">
+                                    <h2>Vladimir Kudinov</h2>
+                                    <span>name</span>
+                                  </div>
+                                    <div class="seatAndTime">
+                                        <div class="seat">
+                                            <h2>156</h2>
+                                            <span>seat</span>
+                                        </div>
+                                        <div class="time">
+                                            <h2>12:00</h2>
+                                            <span>time</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card cardRight">
+                                  <div class="eye"></div>
+                                  <div class="number">
+                                    <h3>156</h3>
+                                    <span>seat</span>
+                                  </div>
+                                  <div class="barcode"></div>
+                                </div>
+
+                              </div>
+                              <!-- <div class="cardWrap">
+                                <div class="card cardLeft">
+                                  <h1>Startup <span>Cinema</span></h1>
+                                  <div class="title">
+                                    <h2>How I met your Mother</h2>
+                                    <span>movie</span>
+                                  </div>
+                                  <div class="name">
+                                    <h2>Vladimir Kudinov</h2>
+                                    <span>name</span>
+                                  </div>
+                                    <div class="seatAndTime">
+                                        <div class="seat">
+                                            <h2>156</h2>
+                                            <span>seat</span>
+                                        </div>
+                                        <div class="time">
+                                            <h2>12:00</h2>
+                                            <span>time</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card cardRight">
+                                  <div class="eye"></div>
+                                  <div class="number">
+                                    <h3>156</h3>
+                                    <span>seat</span>
+                                  </div>
+                                  <div class="barcode"></div>
+                                </div>
+                              
+                              </div> -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+{% endblock content %}

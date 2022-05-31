@@ -1,0 +1,40 @@
+.search:focus{
+    background-color: #E8E8E8;
+}
+
+.not-visible {
+    display: none;
+}
+
+.results-card {
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: black;
+    width: 100%;
+    transition: 0.5s;
+    border-radius: 7px;
+    padding: 15px 15px;
+    margin-top: 40px;
+}
+.movieImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movieText h5, b {
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px 0;
+    color: #fff;
+}
+.item{
+    text-decoration: none;
+}
+.horizontalLine {
+    background-color: #fff;
+}
+.movie-img {
+    width: 50%;
+    height: 50px;
+    border-radius: 50%;
+}

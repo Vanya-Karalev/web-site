@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles%}
+    <link rel="stylesheet" href="{% static 'authorization/auth.css' %}" />
+    <script src="{% static 'authorization/auth.js' %}" defer></script>
+{% endblock styles %}
+
+{% block content %}
+<body>
+    <div class="body-container">
+        <div class="container">
+            <h1>Registration</h1>
+             <form method="POST">
+                 {%csrf_token%}
+                 <div class="form-control-auth">
+                    {{form.username}}
+                    <label>Login</label>
+                </div>
+                <div class="form-control-auth">
+                    {{form.password1}}
+                    <label>Password</label>
+                </div>
+                 <div class="form-control-auth">
+                    {{form.password2}}
+                    <label>Repeat_Password</label>
+                </div>
+                 <div class="form-control-auth">
+                     {{form.first_name}}
+                    <label>Name</label>
+                 </div>
+                 <div class="form-control-auth">
+                     {{form.last_name}}
+                    <label>Surname</label>
+                </div>
+                <div class="form-control-auth">
+                    {{form.email}}
+                    <label>Email</label>
+                </div>
+                 {{ form.errors }}
+                 <button class="btn">Login</button>
+            </form>
+
+            <p>Already Have An Account? <a href="{% url 'login' %}">Sign In</a> </p>
+        </div>
+    </div>
+</body>
+{% endblock content %}
