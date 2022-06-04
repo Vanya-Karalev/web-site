@@ -131,4 +131,4 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-NEED_TO_LOAD_FILMS = True
+NEED_TO_LOAD_FILMS = False

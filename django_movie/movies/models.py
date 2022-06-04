@@ -35,29 +35,31 @@ class Comment(models.Model):
         return 'Comment by {} on {}'.format(self.user, self.movie)
 
 
-class Seat(models.Model):
-    seat = models.PositiveIntegerField('Seat', null=True, blank=True)
-
-    def __str__(self):
-        return self.seat
-
-
 class Ticket(models.Model):
-    user_name = models.CharField('User name', null=True, blank=True, max_length=250)
+    user_first_name = models.CharField('User first name', null=True, blank=True, max_length=250)
+    user_last_name = models.CharField('User last name', null=True, blank=True, max_length=250)
     user_login = models.CharField('User login', null=True, blank=True, max_length=250)
     movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
-    date = models.DateField('Date of movie', null=True, blank=True)
-    time = models.DateTimeField('Movie date and time', null=True, blank=True)
-    seats = models.ManyToManyField(Seat, related_name='seats')
-    seat_count = models.PositiveIntegerField('Seat count', null=True, blank=True)
+    datetime = models.DateTimeField('Movie date and time', null=True, blank=True)
+    seat = models.PositiveIntegerField('Seat', null=True, blank=True)
     type = models.CharField('Ticket type', null=True, blank=True, max_length=100)
 
     def __str__(self):
-        return self.movie
+        return self.movie.__str__()
 
 
-# class Times(models.Model):movie_id=movie.id
-#     date = models.TimeField('Times', null=True, blank=True, max_length=100)
-#
-#     def __str__(self):
-#         return self.date
+class Seat(models.Model):
+    seat = models.PositiveIntegerField('Seat', null=True, blank=True)
+    type = models.BooleanField(default=False)
+
+    def __str__(self):
+        return str(self.seat)
+
+
+class Seats(models.Model):
+    movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
+    datetime = models.DateTimeField('Movie date and time', null=True, blank=True)
+    seats = models.ManyToManyField(Seat, related_name='seats')
+
+    def __str__(self):
+        return str(self.seats)

@@ -1,23 +1,74 @@
-import json
 from dateutil.relativedelta import relativedelta
 import requests
 from django.http import JsonResponse
-from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.views.generic import ListView
+from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
-from movies.models import Movie, Comment
+from movies.models import Movie, Comment, Ticket, Seats, Seat
 from .forms import CommentForm
 import datetime
+import pytz
 
 
 def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
 
-def boockingticket(request, movie_id):
-    boocking = get_object_or_404(Movie, id=movie_id)
+def boockingticket(request, movie_id, choice_date_time):
+    movie = get_object_or_404(Movie, id=movie_id)
+    boocking = get_object_or_404(Movie, id=movie_id, choice_date_time=choice_date_time)
+    seats = get_object_or_404(Seats, id=movie_id, datetime=choice_date_time)
+    print(seats)
+    if request.method == 'POST' and len(request.method) > 0:
+        for i in range(len(request.POST['choices'])):
+            print(request.POST['choices'])
+        # occupied_seats = []
+        # for i in range(len(request.POST['choices'])):
+        #     occupied_seats.append(request.POST['choices'])
 
-    return render(request, 'boockingticket.html', {'boocking': boocking})
+        # for i in range(len(occupied_seats)):
+        #     s = Seats.objects.filter(movie=movie, datetime=choice_date_time)
+        #     one_seat = Seat.objects.update(type=True, seat=i + 1)
+        #     one_seat.save()
+        #     s.seats.update(one_seat)
+        #     s.save()
+
+    # date = '2022-06-02'
+    # time = '15:45'
+    # new_date = date.split('-')
+    # new_time = time.split(':')
+    # date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
+    #                               int(new_time[0]), int(new_time[1]))
+    # string = 'Доктор Стрэндж: В мультивселенной безумия'
+    # movie: Movie = Movie.objects.filter(title=string).first()
+
+    # if not Seats.objects.filter(movie=movie, datetime=date_time).exists():
+    #     for i in range(48):
+    #         Seats.objects.create(movie=movie, datetime=date_time, seat=(i + 1), type=False)
+    #
+    # for i in range(len(my_seats)):
+    #     if not Ticket.objects.filter(user_first_name=request.user.first_name, user_last_name=request.user.last_name,
+    #                                  movie=movie, datetime=date_time, seat=(my_seats[i] + 1), type='Buy',
+    #                                  user_login=request.user.username).exists():
+    #         Ticket.objects.create(user_first_name=request.user.first_name, user_last_name=request.user.last_name,
+    #                               movie=movie, datetime=date_time, seat=(my_seats[i] + 1), type='Buy',
+    #                               user_login=request.user.username)
+    #         Seats.objects.update(movie=movie, datetime=date_time, seat=(my_seats[i] + 1), type=True)
+    #
+    # seat = Seats.objects.filter(movie=movie, datetime=date_time)
+    # print(seat)
+    # seat_list = list(seat)
+    # print(seat_list)
+    # occupied = []
+    # for i in range(len(seat_list)):
+    #     occupied.append(seat_list[i])
+
+    context = {
+        'boocking': boocking,
+        'movie': movie,
+        # 'occupied': occupied,
+    }
+
+    return render(request, 'boockingticket.html', context)
 
 
 def get_movies(request):
@@ -34,23 +85,24 @@ def get_movies(request):
 
         context['filmId'].extend([i['filmId'] for i in response['films']])
 
-        for i in range(5):
+        for i in range(16):
             response = requests.request("GET", 'https://kinopoiskapiunofficial.tech/api/v2.2/films/'
-                                               f'top?type=TOP_100_POPULAR_FILMS&page={i+1}', headers=headers).json()
+                                               f'top?type=TOP_100_POPULAR_FILMS&page={i + 1}', headers=headers).json()
 
             context['filmId'].extend([i['filmId'] for i in response['films']])
 
         for film_id in context['filmId']:
-            response1 = requests.request("GET", f'https://kinopoiskapiunofficial.tech/api/v2.2/films/{film_id}/distributions',
+            response1 = requests.request("GET",
+                                         f'https://kinopoiskapiunofficial.tech/api/v2.2/films/{film_id}/distributions',
                                          headers=headers).json()
             context1 = {'date': [i['date'] for i in response1['items']]}
 
-            film_date = context1['date'][0]
+            try:
+                film_date = context1['date'][0]
 
-            if film_date is None:
+                film_date = film_date.split('-')
+            except BaseException:
                 continue
-
-            film_date = film_date.split('-')
 
             if (datetime.date(int(film_date[0]), int(film_date[1]), int(film_date[2]))) + relativedelta(months=+1) \
                     >= (datetime.date.today()):
@@ -81,8 +133,9 @@ def get_movies(request):
                         price=10,
                         film_id=film_id,
                     )
+
                 else:
-                    Movie.objects.filter(film_id=film_id).update(
+                    model = Movie.objects.filter(film_id=film_id).update(
                         title=main_response.get('nameRu', ''),
                         small_description=main_response['shortDescription'][:150],
                         description=main_response['description'],
@@ -96,14 +149,39 @@ def get_movies(request):
                         price=10,
                         film_id=film_id,
                     )
+
         settings.NEED_TO_LOAD_FILMS = False
 
-    movies = Movie.objects.all()
+    movies = Movie.objects.all().order_by('-title')
     return render(request, 'index.html', {"movie_list": movies})
 
 
 def comment(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
+    choice_date_time = datetime.datetime.now()
+    if request.method == 'GET':
+        if len(request.GET) > 0:
+            choice_date = request.GET['date']
+            choice_time = request.GET['time']
+            new_date = choice_date.split('-')
+            new_time = choice_time.split(':')
+            date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
+                                          int(new_time[0]), int(new_time[1]))
+            belarus_timezone = pytz.timezone('Europe/Minsk')
+            choice_date_time = belarus_timezone.localize(date_time)
+            if not Seats.objects.filter(movie=movie, datetime=choice_date_time).exists():
+                s = Seats(movie=movie, datetime=choice_date_time)
+                s.save()
+                for i in range(48):
+                    one_seat = Seat.objects.create(type=False, seat=i + 1)
+                    one_seat.save()
+                    s.seats.add(one_seat)
+                    s.save()
+
+            return render(request, 'boockingticket.html', {
+                'movie': movie,
+                'choice_date_time': choice_date_time,
+            })
 
     form = CommentForm(request.POST, instance=movie)
     if request.method == 'POST':
@@ -137,12 +215,9 @@ def comment(request, movie_id):
         'start_date': start_date,
         'end_date': end_date,
         'date': date,
+        'choice_date_time': choice_date_time,
     }
     return render(request, 'movieinfo.html', context)
-
-
-# def main_view(request):
-#     return render(request, '', {})
 
 
 def search_results(request):
@@ -154,7 +229,7 @@ def search_results(request):
             data = []
             for pos in qs:
                 item = {
-                    'id': pos.film_id,
+                    'id': pos.id,
                     'title': pos.title,
                     'poster': str(pos.poster)
                 }

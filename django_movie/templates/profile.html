@@ -1,29 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block styles%}
-    <link rel="stylesheet" href="{% static 'profile/profile.css' %}" />
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'profile/profile.css' %}"/>
     <script src="{% static 'profile/profile.js' %}" defer></script>
 {% endblock styles %}
 
-{% block content%}
-<body>
+{% block content %}
+    <body>
     <div class="body-container">
         <div id="DIV_233">
             Личный кабинет
         </div>
-        {%if messages%}
-            {%for message in messages%}
-                <div class="alert alert-{{message.tags}}">
-                     {{message}}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
                 </div>
-            {%endfor%}
-        {%endif%}
+            {% endfor %}
+        {% endif %}
         <div id="DIV_1">
             <div id="DIV_2">
                 <div id="DIV_3">
                     <picture id="PICTURE_4">
-                        <img src="https://my.bycard.by/img/user-ico.937b09de.png" id="IMG_5" alt='' />
+                        <img src="https://my.bycard.by/img/user-ico.937b09de.png" id="IMG_5" alt=''/>
                     </picture>
                 </div>
                 <div id="DIV_6">
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <form method="POST">
-                {%csrf_token%}
+                {% csrf_token %}
                 <div id="DIV_13">
                     <div id="DIV_14">
                         <div id="DIV_15">
@@ -41,7 +41,7 @@
                                     <div id="DIV_18" style="font-size: 18px">
                                         Имя
                                     </div>
-                                    {{u_form.first_name}}
+                                    {{ u_form.first_name }}
                                 </div>
                             </div>
                             <div id="DIV_20">
@@ -49,7 +49,7 @@
                                     <div id="DIV_22" style="font-size: 18px">
                                         Фамилия
                                     </div>
-                                    {{u_form.last_name}}
+                                    {{ u_form.last_name }}
                                 </div>
                             </div>
                             <div id="DIV_225">
@@ -57,7 +57,7 @@
                                     <div id="DIV_227" style="font-size: 18px">
                                         Email
                                     </div>
-                                    {{u_form.email}}
+                                    {{ u_form.email }}
                                 </div>
                             </div>
                             {{ form.errors }}
@@ -67,9 +67,11 @@
                                         <button id="BUTTON_232" type="submit">
                                             Сохранить данные
                                         </button>
+                                        {% if not request.user.is_superuser %}
                                         <button id="BUTTON_232" style="background-color: red">
                                             Delete account
                                         </button>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -84,11 +86,12 @@
                     <div id="DIV_237">
                         <div id="DIV_238">
                             <div id="DIV_239">
-                                <a id="A_20" class="actually">Актуальные</a><a id="A_21" class="booked">Забронировано</a><a id="A_22" class="archive">Архив</a>
+                                <a id="A_20" class="actually">Куплено</a><a id="A_21" class="booked">Забронировано</a>
+                                <a id="A_22" class="archive">Архив</a>
                             </div>
                         </div>
                         <div id="DIV_240">
-
+{#                            {% for %}#}
                             <div id="DIV_241">
                                 <div id="DIV_242">
                                     <div id="DIV_243">
@@ -107,15 +110,15 @@
 
                             <div class="cardWrap">
                                 <div class="card cardLeft">
-                                  <h1>Startup <span>Cinema</span></h1>
-                                  <div class="title">
-                                    <h2>How I met your Mother</h2>
-                                    <span>movie</span>
-                                  </div>
-                                  <div class="name">
-                                    <h2>Vladimir Kudinov</h2>
-                                    <span>name</span>
-                                  </div>
+                                    <h1>Startup <span>Cinema</span></h1>
+                                    <div class="title">
+                                        <h2>How I met your Mother</h2>
+                                        <span>movie</span>
+                                    </div>
+                                    <div class="name">
+                                        <h2>Vladimir Kudinov</h2>
+                                        <span>name</span>
+                                    </div>
                                     <div class="seatAndTime">
                                         <div class="seat">
                                             <h2>156</h2>
@@ -128,26 +131,26 @@
                                     </div>
                                 </div>
                                 <div class="card cardRight">
-                                  <div class="eye"></div>
-                                  <div class="number">
-                                    <h3>156</h3>
-                                    <span>seat</span>
-                                  </div>
-                                  <div class="barcode"></div>
+                                    <div class="eye"></div>
+                                    <div class="number">
+                                        <h3>156</h3>
+                                        <span>seat</span>
+                                    </div>
+                                    <div class="barcode"></div>
                                 </div>
+                            </div>
 
-                              </div>
-                              <div class="cardWrap">
+                            <div class="cardWrap">
                                 <div class="card cardLeft">
-                                  <h1>Startup <span>Cinema</span></h1>
-                                  <div class="title">
-                                    <h2>How I met your Mother</h2>
-                                    <span>movie</span>
-                                  </div>
-                                  <div class="name">
-                                    <h2>Vladimir Kudinov</h2>
-                                    <span>name</span>
-                                  </div>
+                                    <h1>Startup <span>Cinema</span></h1>
+                                    <div class="title">
+                                        <h2>How I met your Mother</h2>
+                                        <span>movie</span>
+                                    </div>
+                                    <div class="name">
+                                        <h2>Vladimir Kudinov</h2>
+                                        <span>name</span>
+                                    </div>
                                     <div class="seatAndTime">
                                         <div class="seat">
                                             <h2>156</h2>
@@ -160,47 +163,14 @@
                                     </div>
                                 </div>
                                 <div class="card cardRight">
-                                  <div class="eye"></div>
-                                  <div class="number">
-                                    <h3>156</h3>
-                                    <span>seat</span>
-                                  </div>
-                                  <div class="barcode"></div>
-                                </div>
-
-                              </div>
-                              <!-- <div class="cardWrap">
-                                <div class="card cardLeft">
-                                  <h1>Startup <span>Cinema</span></h1>
-                                  <div class="title">
-                                    <h2>How I met your Mother</h2>
-                                    <span>movie</span>
-                                  </div>
-                                  <div class="name">
-                                    <h2>Vladimir Kudinov</h2>
-                                    <span>name</span>
-                                  </div>
-                                    <div class="seatAndTime">
-                                        <div class="seat">
-                                            <h2>156</h2>
-                                            <span>seat</span>
-                                        </div>
-                                        <div class="time">
-                                            <h2>12:00</h2>
-                                            <span>time</span>
-                                        </div>
+                                    <div class="eye"></div>
+                                    <div class="number">
+                                        <h3>156</h3>
+                                        <span>seat</span>
                                     </div>
+                                    <div class="barcode"></div>
                                 </div>
-                                <div class="card cardRight">
-                                  <div class="eye"></div>
-                                  <div class="number">
-                                    <h3>156</h3>
-                                    <span>seat</span>
-                                  </div>
-                                  <div class="barcode"></div>
-                                </div>
-                              
-                              </div> -->
+                            </div>
 
                         </div>
                     </div>
@@ -211,5 +181,5 @@
         </div>
     </div>
 
-</body>
+    </body>
 {% endblock content %}

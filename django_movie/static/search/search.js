@@ -1,5 +1,3 @@
-console.log('hello world')
-
 const url = window.location.href
 const searchForm = document.getElementById('search-form')
 const searchInput = document.getElementById('search-input')
@@ -24,7 +22,7 @@ const sendSearchData = (movie) => {
                 resultsBox.innerHTML = ""
                 data.forEach(movie=>{
                     resultsBox.innerHTML += `
-                         <a href="${url}${'movieinfo'}${movie.id}" class="item">
+                         <a href="${url}${'movieinfo/'}${movie.id}" class="item">
                              <div class="row mt-2 mb-2">
                                  <div class="movieImg">
                                      <img style="height: 200px;" src="${movie.poster}">

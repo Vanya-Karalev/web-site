@@ -1,10 +1,7 @@
-
-
-
 $("#date").html(localStorage.getItem('MovieDate'));
 $("#time").html(localStorage.getItem('MovieTime'));
 $("#name").html(localStorage.getItem('MovieName'));
-localStorage.clear();
+// localStorage.clear();
 const mycontainer = document.querySelector('.mycontainer');
 const seats = document.querySelectorAll('.row .seat:not(occupied)');
 const count = document.getElementById('count');
@@ -74,7 +71,7 @@ mycontainer.addEventListener('click', e => {
     console.log(e.target);
     e.target.classList.toggle('selected');
   }
-  
+
    // select a seat and turn it blue
 
   updateSelectedCount();
@@ -82,7 +79,3 @@ mycontainer.addEventListener('click', e => {
 
 //Initial count and total set
 updateSelectedCount();
-function getTakenSeats(){
-  let takenSeats =  $(".seat.selected");
-  console.log(takenSeats);
-}
