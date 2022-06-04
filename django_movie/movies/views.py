@@ -19,6 +19,7 @@ def boockingticket(request, movie_id):
 
     if 'choices' in request.POST:
         print(request.POST)
+        return render(request, 'movieinfo.html', {'movie': movie})
 
     context = {
         'boocking': boocking,
@@ -118,7 +119,7 @@ def comment(request, movie_id):
 
     if request.method == 'POST' and len(request.POST) > 0:
         print(request.POST)
-        return render(request, 'boockingticket.html', {'movie': movie})
+        return redirect('boockingticket', movie_id=movie.id)
     # choice_date_time = datetime.datetime.now()
 
     #     choice_date = request.GET['date']

@@ -11,7 +11,7 @@
     <div class="body-container">
         <div class="movie-container">
             <label id="movie">
-                <label value="10" id="name">{{ movie }} ($10)</label>
+{#                <label value="10" id="name">{{ movie }} ($10)</label>#}
             </label>
             <br>
             <label id="date"></label>
@@ -106,7 +106,7 @@
 
         {% if request.user.is_authenticated %}
             <div class="buttons">
-                <button class="btn btn-primary btn-lg" type="submit" style="background-color: #e91e63; border-color: #e91e63">Book tickets</button>
+                <button href="{% url 'movieinfo' movie_id=movie.id %}" class="btn btn-primary btn-lg" type="submit" style="background-color: #e91e63; border-color: #e91e63">Book tickets</button>
             </div>
         {% endif %}
         </form>
