@@ -56,7 +56,7 @@
                             </div>
 
 
-                            <form method="get">
+                            <form method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <label for="inputDate">Choose date and time</label>
@@ -65,15 +65,15 @@
                                 </div>
                                 <div class="form-group">
                                     <select style="width: 300px" name="time" id="time">
-                                        <option value="11:00" name="time">11:00</option>
-                                        <option value="15:00" name="time">15:00</option>
-                                        <option value="19:00" name="time">19:00</option>
-                                        <option value="23:00" name="time">23:00</option>
+                                        <option value="11:00" name="time">10:00</option>
+                                        <option value="15:00" name="time">14:00</option>
+                                        <option value="19:00" name="time">18:00</option>
+                                        <option value="23:00" name="time">22:00</option>
                                     </select>
                                 </div>
                                 <div class="mybutton">
                                     <input type="submit" class="setTime"
-                                           href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}"/>
+                                           href="{% url 'boockingticket' movie_id=movie.id %}"/>
                                 </div>
                             </form>
 

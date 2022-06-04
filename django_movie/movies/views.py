@@ -13,59 +13,16 @@ def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
 
-def boockingticket(request, movie_id, choice_date_time):
+def boockingticket(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
-    boocking = get_object_or_404(Movie, id=movie_id, choice_date_time=choice_date_time)
-    seats = get_object_or_404(Seats, id=movie_id, datetime=choice_date_time)
-    print(seats)
-    if request.method == 'POST' and len(request.method) > 0:
-        for i in range(len(request.POST['choices'])):
-            print(request.POST['choices'])
-        # occupied_seats = []
-        # for i in range(len(request.POST['choices'])):
-        #     occupied_seats.append(request.POST['choices'])
+    boocking = get_object_or_404(Movie, id=movie_id)
 
-        # for i in range(len(occupied_seats)):
-        #     s = Seats.objects.filter(movie=movie, datetime=choice_date_time)
-        #     one_seat = Seat.objects.update(type=True, seat=i + 1)
-        #     one_seat.save()
-        #     s.seats.update(one_seat)
-        #     s.save()
-
-    # date = '2022-06-02'
-    # time = '15:45'
-    # new_date = date.split('-')
-    # new_time = time.split(':')
-    # date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
-    #                               int(new_time[0]), int(new_time[1]))
-    # string = 'Доктор Стрэндж: В мультивселенной безумия'
-    # movie: Movie = Movie.objects.filter(title=string).first()
-
-    # if not Seats.objects.filter(movie=movie, datetime=date_time).exists():
-    #     for i in range(48):
-    #         Seats.objects.create(movie=movie, datetime=date_time, seat=(i + 1), type=False)
-    #
-    # for i in range(len(my_seats)):
-    #     if not Ticket.objects.filter(user_first_name=request.user.first_name, user_last_name=request.user.last_name,
-    #                                  movie=movie, datetime=date_time, seat=(my_seats[i] + 1), type='Buy',
-    #                                  user_login=request.user.username).exists():
-    #         Ticket.objects.create(user_first_name=request.user.first_name, user_last_name=request.user.last_name,
-    #                               movie=movie, datetime=date_time, seat=(my_seats[i] + 1), type='Buy',
-    #                               user_login=request.user.username)
-    #         Seats.objects.update(movie=movie, datetime=date_time, seat=(my_seats[i] + 1), type=True)
-    #
-    # seat = Seats.objects.filter(movie=movie, datetime=date_time)
-    # print(seat)
-    # seat_list = list(seat)
-    # print(seat_list)
-    # occupied = []
-    # for i in range(len(seat_list)):
-    #     occupied.append(seat_list[i])
+    if 'choices' in request.POST:
+        print(request.POST)
 
     context = {
         'boocking': boocking,
         'movie': movie,
-        # 'occupied': occupied,
     }
 
     return render(request, 'boockingticket.html', context)
@@ -158,40 +115,45 @@ def get_movies(request):
 
 def comment(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
-    choice_date_time = datetime.datetime.now()
-    if request.method == 'GET':
-        if len(request.GET) > 0:
-            choice_date = request.GET['date']
-            choice_time = request.GET['time']
-            new_date = choice_date.split('-')
-            new_time = choice_time.split(':')
-            date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
-                                          int(new_time[0]), int(new_time[1]))
-            belarus_timezone = pytz.timezone('Europe/Minsk')
-            choice_date_time = belarus_timezone.localize(date_time)
-            if not Seats.objects.filter(movie=movie, datetime=choice_date_time).exists():
-                s = Seats(movie=movie, datetime=choice_date_time)
-                s.save()
-                for i in range(48):
-                    one_seat = Seat.objects.create(type=False, seat=i + 1)
-                    one_seat.save()
-                    s.seats.add(one_seat)
-                    s.save()
 
-            return render(request, 'boockingticket.html', {
-                'movie': movie,
-                'choice_date_time': choice_date_time,
-            })
+    if request.method == 'POST' and len(request.POST) > 0:
+        print(request.POST)
+        return render(request, 'boockingticket.html', {'movie': movie})
+    # choice_date_time = datetime.datetime.now()
+
+    #     choice_date = request.GET['date']
+    #     choice_time = request.GET['time']
+    #     new_date = choice_date.split('-')
+    #     new_time = choice_time.split(':')
+    #     date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
+    #                                   int(new_time[0]), int(new_time[1]))
+    #     timezone = pytz.timezone('Europe/London')
+    #     choice_date_time = timezone.localize(date_time)
+    #     if not Seats.objects.filter(movie=movie, datetime=choice_date_time).exists():
+    #         s = Seats(movie=movie, datetime=choice_date_time)
+    #         s.save()
+    #         for i in range(48):
+    #             one_seat = Seat.objects.create(type=False, seat=i + 1)
+    #             one_seat.save()
+    #             s.seats.add(one_seat)
+    #             s.save()
+    #
+    #     occupied_seats = []
+    #
+        # return render(request, 'boockingticket.html', {
+        #     'movie': movie,
+        #     # 'choice_date_time': choice_date_time,
+        #     # 'occupied': occupied,
+        # })
 
     form = CommentForm(request.POST, instance=movie)
     if request.method == 'POST':
-
         if form.is_valid():
             user = request.user.username
             content = form.cleaned_data['content']
             c = Comment(movie=movie, user=user, content=content, date=datetime.datetime.now())
             c.save()
-            return redirect('index')
+            return redirect('movieinfo', movie_id=movie.id)
         else:
             print('form is invalid')
     else:
@@ -215,7 +177,6 @@ def comment(request, movie_id):
         'start_date': start_date,
         'end_date': end_date,
         'date': date,
-        'choice_date_time': choice_date_time,
     }
     return render(request, 'movieinfo.html', context)
 
