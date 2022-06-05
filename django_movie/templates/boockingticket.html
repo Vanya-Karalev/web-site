@@ -11,7 +11,7 @@
     <div class="body-container">
         <div class="movie-container">
             <label id="movie">
-                <label value="10" id="name"> {{ movie.title }}($10)</label>
+                <label value="10" id="name"> {{ movie.title }} ($10)</label>
             </label>
             <br>
             <label id="date"></label>
@@ -97,14 +97,12 @@
                     <input type="checkbox" class="seat" value=47 name="choices">
                     <input type="checkbox" class="seat" value=48 name="choices">
                 </div>
-
         </div>
 
         <p class="text">
             You have selected <span id="count" name="seat_count">0</span> seats to see
             <span id="movie-Name"></span> for a price of span $<span id="total">0</span>
         </p>
-
         {% if request.user.is_authenticated %}
             <div class="buttons">
                 <button href="{% url 'movieinfo' movie_id=movie.id %}" class="btn btn-primary btn-lg" type="submit" style="background-color: #e91e63; border-color: #e91e63">Book tickets</button>
@@ -113,4 +111,22 @@
         </form>
     </div>
     </body>
+    <script type="text/javascript">
+            var occupiedSeats = {{ occupied_seats }};
+            var value;
+            var elementBlock;
+           $(".row .seat").each(function(){
+                value = $(this).val();
+                elementBlock = $(this);
+                occupiedSeats.forEach(element => {
+                    if(element == value){
+                        $(this).css("height", "10px");
+                        $(this).css("weight", "10px");
+                        elementBlock.click(function (){
+                           return false;
+                        });
+                    }
+                });
+            });
+    </script>
 {% endblock content %}

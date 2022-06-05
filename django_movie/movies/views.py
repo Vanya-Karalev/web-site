@@ -16,7 +16,6 @@ def is_ajax(request):
 def boockingticket(request, movie_id, choice_date_time):
     movie = get_object_or_404(Movie, id=movie_id)
     boocking = get_object_or_404(Movie, id=movie_id)
-    # seats = get_object_or_404(Seats, movie=movie, datetime=choice_date_time)
     print(choice_date_time)
     if 'choices' in request.POST:
         print(request.POST)
@@ -31,9 +30,16 @@ def boockingticket(request, movie_id, choice_date_time):
             Seat.objects.create(movie=movie, datetime=choice_date_time, seat=buying_ticket)
         return redirect('movieinfo', movie_id=movie.id)
 
+    occupied_seats = []
+    if Seat.objects.filter(movie=movie, datetime=choice_date_time).exists():
+        seats = Seat.objects.filter(movie=movie, datetime=choice_date_time)
+        for i in seats:
+            occupied_seats.append(i.seat)
+    print(occupied_seats)
     context = {
         'boocking': boocking,
         'movie': movie,
+        'occupied_seats': occupied_seats,
     }
 
     return render(request, 'boockingticket.html', context)
@@ -153,7 +159,7 @@ def comment(request, movie_id):
             return redirect('boockingticket', movie_id=movie.id, choice_date_time=choice_date_time)
 
     form = CommentForm(request.POST, instance=movie)
-    if request.method == 'POST':
+    if 'content' in request.POST:
         if form.is_valid():
             user = request.user.username
             content = form.cleaned_data['content']

@@ -42,7 +42,7 @@
         {% endif %}
         {% if request.user.is_authenticated %}
             <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="#" class="MyTickets">My tickets</a></li>
+            <li><a href="{% url 'profile' %}#" class="MyTickets">My tickets</a></li>
             <li><a href="{% url 'logout' %}">Log out</a></li>
         {% endif %}
         {% if request.user.is_superuser %}
