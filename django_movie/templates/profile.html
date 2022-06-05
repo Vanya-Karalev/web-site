@@ -27,7 +27,7 @@
                     </picture>
                 </div>
                 <div id="DIV_6">
-                    <a href="#" id="A_7" class="myTicketsButton">Мои билеты<span id="SPAN_8">0</span></a>
+                    <a href="#" id="A_7" class="myTicketsButton">Мои билеты<span id="SPAN_8">{{ all_ticket.count }}</span></a>
                     <a href="#" id="A_11" class="profileButton">Профиль</a>
                 </div>
             </div>
@@ -68,9 +68,9 @@
                                             Сохранить данные
                                         </button>
                                         {% if not request.user.is_superuser %}
-                                        <button id="BUTTON_232" style="background-color: red">
-                                            Delete account
-                                        </button>
+                                            <button id="BUTTON_232" style="background-color: red">
+                                                Delete account
+                                            </button>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -86,91 +86,62 @@
                     <div id="DIV_237">
                         <div id="DIV_238">
                             <div id="DIV_239">
-                                <a id="A_20" class="actually">Куплено</a><a id="A_21" class="booked">Забронировано</a>
+                                {#                                <a id="A_20" class="actually">Куплено</a><a id="A_21" class="booked">Забронировано</a>#}
                                 <a id="A_22" class="archive">Архив</a>
                             </div>
                         </div>
                         <div id="DIV_240">
-{#                            {% for %}#}
-                            <div id="DIV_241">
-                                <div id="DIV_242">
-                                    <div id="DIV_243">
-                                        <div id="DIV_244">
-                                            <i id="I_20"></i>
-                                            <div id="DIV_245">
-                                                У вас нет актуальных билетов.
+                            {% if all_ticket.count == 0 %}
+                                <div id="DIV_241">
+                                    <div id="DIV_242">
+                                        <div id="DIV_243">
+                                            <div id="DIV_244">
+                                                <i id="I_20"></i>
+                                                <div id="DIV_245">
+                                                    У вас нет актуальных билетов.
+                                                </div>
+                                            </div>
+{#                                            <button id="BUTTON_15" href="{% url 'index' %}">#}
+{#                                                Перейти к афише#}
+{#                                            </button>#}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                {% for tickets in all_ticket %}
+                                    <div class="cardWrap">
+                                        <div class="card cardLeft">
+                                            <h1>Startup <span>Cinema</span></h1>
+                                            <div class="title">
+                                                <h2>{{ tickets.movie }}</h2>
+                                                <span>movie</span>
+                                            </div>
+                                            <div class="name">
+                                                <h2>{{ tickets.user_first_name }} {{ tickets.user_last_name }}</h2>
+                                                <span>name</span>
+                                            </div>
+                                            <div class="seatAndTime">
+                                                <div class="seat">
+                                                    <h2>{{ tickets.seat }}</h2>
+                                                    <span>seat</span>
+                                                </div>
+                                                <div class="time">
+                                                    <h2>{{ tickets.datetime }}</h2>
+                                                    <span style="width: 50px">date and time</span>
+                                                </div>
                                             </div>
                                         </div>
-                                        <button id="BUTTON_15">
-                                            Перейти к афише
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cardWrap">
-                                <div class="card cardLeft">
-                                    <h1>Startup <span>Cinema</span></h1>
-                                    <div class="title">
-                                        <h2>How I met your Mother</h2>
-                                        <span>movie</span>
-                                    </div>
-                                    <div class="name">
-                                        <h2>Vladimir Kudinov</h2>
-                                        <span>name</span>
-                                    </div>
-                                    <div class="seatAndTime">
-                                        <div class="seat">
-                                            <h2>156</h2>
-                                            <span>seat</span>
-                                        </div>
-                                        <div class="time">
-                                            <h2>12:00</h2>
-                                            <span>time</span>
+                                        <div class="card cardRight">
+                                            <div class="eye"></div>
+                                            <div class="number">
+                                                <h3>{{ tickets.seat }}</h3>
+                                                <span>seat</span>
+                                            </div>
+                                            <div class="barcode"></div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card cardRight">
-                                    <div class="eye"></div>
-                                    <div class="number">
-                                        <h3>156</h3>
-                                        <span>seat</span>
-                                    </div>
-                                    <div class="barcode"></div>
-                                </div>
-                            </div>
-
-                            <div class="cardWrap">
-                                <div class="card cardLeft">
-                                    <h1>Startup <span>Cinema</span></h1>
-                                    <div class="title">
-                                        <h2>How I met your Mother</h2>
-                                        <span>movie</span>
-                                    </div>
-                                    <div class="name">
-                                        <h2>Vladimir Kudinov</h2>
-                                        <span>name</span>
-                                    </div>
-                                    <div class="seatAndTime">
-                                        <div class="seat">
-                                            <h2>156</h2>
-                                            <span>seat</span>
-                                        </div>
-                                        <div class="time">
-                                            <h2>12:00</h2>
-                                            <span>time</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card cardRight">
-                                    <div class="eye"></div>
-                                    <div class="number">
-                                        <h3>156</h3>
-                                        <span>seat</span>
-                                    </div>
-                                    <div class="barcode"></div>
-                                </div>
-                            </div>
+                                {% endfor %}
+                            {% endif %}
 
                         </div>
                     </div>

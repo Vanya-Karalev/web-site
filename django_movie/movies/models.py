@@ -9,13 +9,13 @@ class Genre(models.Model):
 
 
 class Movie(models.Model):
-    title = models.CharField('Movie title', null=True, blank=True, max_length=250)
+    title = models.CharField('Movie title', null=True, blank=True, max_length=250, default='')
     small_description = models.CharField('Small description', null=True, blank=True, max_length=150)
     description = models.TextField('Description', null=True, blank=True)
     poster = models.URLField('Poster', null=True, blank=True, max_length=1000)
     start_date = models.DateField('Premiere beginning', null=True, blank=True)
     end_date = models.DateField('Premiere ending', null=True, blank=True)
-    genres = models.ManyToManyField(Genre, related_name='movies')
+    genres = models.ManyToManyField(Genre, related_name='genres')
     movie_length = models.PositiveIntegerField('Movie length', null=True, blank=True)
     category = models.CharField('Movie category', null=True, blank=True, default='', max_length=250)
     price = models.PositiveIntegerField('Movie price', default=10)
@@ -48,17 +48,10 @@ class Ticket(models.Model):
 
 
 class Seat(models.Model):
+    movie = models.ForeignKey('Movie', on_delete=models.CASCADE, default='')
+    datetime = models.DateTimeField('Movie date and time', null=True, blank=True)
     seat = models.PositiveIntegerField('Seat', null=True, blank=True)
     type = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.seat)
-
-
-class Seats(models.Model):
-    movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
-    datetime = models.DateTimeField('Movie date and time', null=True, blank=True)
-    seats = models.ManyToManyField(Seat, related_name='seats')
-
-    def __str__(self):
-        return str(self.seats)
+        return 'seat:{} type:{} movie:{} date:{}'.format(str(self.seat), self.type, self.movie, self.datetime)

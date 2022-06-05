@@ -3,7 +3,7 @@ import requests
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
-from movies.models import Movie, Comment, Ticket, Seats, Seat
+from movies.models import Movie, Comment, Ticket, Seat
 from .forms import CommentForm
 import datetime
 import pytz
@@ -16,7 +16,7 @@ def is_ajax(request):
 def boockingticket(request, movie_id, choice_date_time):
     movie = get_object_or_404(Movie, id=movie_id)
     boocking = get_object_or_404(Movie, id=movie_id)
-    # ticket = get_object_or_404(Ticket, id=movie_id, datetime=choice_date_time)
+    # seats = get_object_or_404(Seats, movie=movie, datetime=choice_date_time)
     print(choice_date_time)
     if 'choices' in request.POST:
         print(request.POST)
@@ -24,9 +24,11 @@ def boockingticket(request, movie_id, choice_date_time):
         print(buy_list)
 
         for buying_ticket in buy_list:
-            if not Ticket.objects.filter(movie=movie, seat=buying_ticket).exists():
+            if not Ticket.objects.filter(movie=movie, seat=buying_ticket, datetime=choice_date_time).exists():
                 Ticket.objects.create(user_first_name=request.user.first_name, user_last_name=request.user.last_name,
-                                      user_login=request.user.username, movie=movie, seat=buying_ticket)
+                                      user_login=request.user.username, movie=movie, seat=buying_ticket,
+                                      datetime=choice_date_time)
+            Seat.objects.create(movie=movie, datetime=choice_date_time, seat=buying_ticket)
         return redirect('movieinfo', movie_id=movie.id)
 
     context = {
@@ -129,7 +131,6 @@ def comment(request, movie_id):
     if 'date' in request.POST and 'time' in request.POST:
         if request.method == 'POST' and len(request.POST) > 0:
             print(request.POST)
-
             choice_date = request.POST['date']
             choice_time = request.POST['time']
             new_date = choice_date.split('-')
@@ -138,17 +139,17 @@ def comment(request, movie_id):
                                           int(new_time[0]), int(new_time[1]))
             timezone = pytz.timezone('Europe/London')
             choice_date_time = timezone.localize(date_time)
-            if not Seats.objects.filter(movie=movie, datetime=choice_date_time).exists():
-                s = Seats(movie=movie, datetime=choice_date_time)
-                s.save()
-                for i in range(48):
-                    one_seat = Seat.objects.create(type=False, seat=i + 1)
-                    one_seat.save()
-                    s.seats.add(one_seat)
-                    s.save()
-
+            print(choice_date_time)
             occupied_seats = []
-
+            if Seat.objects.filter(movie=movie, datetime=choice_date_time).exists():
+                seats = Seat.objects.filter(movie=movie, datetime=choice_date_time)
+                for i in seats:
+                    occupied_seats.append(i.seat)
+            print(occupied_seats)
+            # return render(request, 'boockingticket.html', {'occupied_seats': occupied_seats,
+            #                                                'movie_id': movie.id,
+            #                                                'choice_date_time': choice_date_time,
+            #                                                })
             return redirect('boockingticket', movie_id=movie.id, choice_date_time=choice_date_time)
 
     form = CommentForm(request.POST, instance=movie)

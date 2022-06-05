@@ -42,8 +42,6 @@ def logoutPage(request):
 
 def profile(request):
     u_form = UserUpdateForm(instance=request.user)
-    buy_ticket = Ticket.objects.filter(type='Buy', user_login=request.user.username)
-    book_ticket = Ticket.objects.filter(type='Book',user_login=request.user.username)
     all_ticket = Ticket.objects.filter(user_login=request.user.username)
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
@@ -56,8 +54,6 @@ def profile(request):
 
     context = {
         'u_form': u_form,
-        'buy_ticket': buy_ticket,
-        'book_ticket': book_ticket,
         'all_ticket': all_ticket,
     }
     return render(request, 'profile.html', context)
