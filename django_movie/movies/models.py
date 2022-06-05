@@ -42,7 +42,6 @@ class Ticket(models.Model):
     movie = models.ForeignKey('Movie', on_delete=models.CASCADE)
     datetime = models.DateTimeField('Movie date and time', null=True, blank=True)
     seat = models.PositiveIntegerField('Seat', null=True, blank=True)
-    type = models.CharField('Ticket type', null=True, blank=True, max_length=100)
 
     def __str__(self):
         return self.movie.__str__()

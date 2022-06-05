@@ -1,6 +1,6 @@
-// $("#date").html(localStorage.getItem('MovieDate'));
-// $("#time").html(localStorage.getItem('MovieTime'));
-// $("#name").html(localStorage.getItem('MovieName'));
+$("#date").html(localStorage.getItem('MovieDate'));
+$("#time").html(localStorage.getItem('MovieTime'));
+$("#name").html(localStorage.getItem('MovieName'));
 // localStorage.clear();
 const mycontainer = document.querySelector('.mycontainer');
 const seats = document.querySelectorAll('.row .seat:not(occupied)');

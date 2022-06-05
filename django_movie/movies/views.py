@@ -19,7 +19,14 @@ def boockingticket(request, movie_id):
 
     if 'choices' in request.POST:
         print(request.POST)
-        return render(request, 'movieinfo.html', {'movie': movie})
+        buy_list = [int(i) for i in request.POST.getlist('choices')]
+        print(buy_list)
+
+        for buying_ticket in buy_list:
+            if not Ticket.objects.filter(movie=movie, seat=buying_ticket).exists():
+                Ticket.objects.create(user_first_name=request.user.first_name, user_last_name=request.user.last_name,
+                                      user_login=request.user.username, movie=movie, seat=buying_ticket)
+        return redirect('movieinfo', movie_id=movie.id)
 
     context = {
         'boocking': boocking,
@@ -117,35 +124,30 @@ def get_movies(request):
 def comment(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
 
-    if request.method == 'POST' and len(request.POST) > 0:
-        print(request.POST)
-        return redirect('boockingticket', movie_id=movie.id)
-    # choice_date_time = datetime.datetime.now()
+    if 'date' in request.POST and 'time' in request.POST:
+        if request.method == 'POST' and len(request.POST) > 0:
+            print(request.POST)
 
-    #     choice_date = request.GET['date']
-    #     choice_time = request.GET['time']
-    #     new_date = choice_date.split('-')
-    #     new_time = choice_time.split(':')
-    #     date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
-    #                                   int(new_time[0]), int(new_time[1]))
-    #     timezone = pytz.timezone('Europe/London')
-    #     choice_date_time = timezone.localize(date_time)
-    #     if not Seats.objects.filter(movie=movie, datetime=choice_date_time).exists():
-    #         s = Seats(movie=movie, datetime=choice_date_time)
-    #         s.save()
-    #         for i in range(48):
-    #             one_seat = Seat.objects.create(type=False, seat=i + 1)
-    #             one_seat.save()
-    #             s.seats.add(one_seat)
-    #             s.save()
-    #
-    #     occupied_seats = []
-    #
-        # return render(request, 'boockingticket.html', {
-        #     'movie': movie,
-        #     # 'choice_date_time': choice_date_time,
-        #     # 'occupied': occupied,
-        # })
+            choice_date = request.POST['date']
+            choice_time = request.POST['time']
+            new_date = choice_date.split('-')
+            new_time = choice_time.split(':')
+            date_time = datetime.datetime(int(new_date[0]), int(new_date[1]), int(new_date[2]),
+                                          int(new_time[0]), int(new_time[1]))
+            timezone = pytz.timezone('Europe/London')
+            choice_date_time = timezone.localize(date_time)
+            if not Seats.objects.filter(movie=movie, datetime=choice_date_time).exists():
+                s = Seats(movie=movie, datetime=choice_date_time)
+                s.save()
+                for i in range(48):
+                    one_seat = Seat.objects.create(type=False, seat=i + 1)
+                    one_seat.save()
+                    s.seats.add(one_seat)
+                    s.save()
+
+            occupied_seats = []
+
+            return redirect('boockingticket', movie_id=movie.id)
 
     form = CommentForm(request.POST, instance=movie)
     if request.method == 'POST':
