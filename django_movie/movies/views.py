@@ -13,10 +13,11 @@ def is_ajax(request):
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
 
-def boockingticket(request, movie_id):
+def boockingticket(request, movie_id, choice_date_time):
     movie = get_object_or_404(Movie, id=movie_id)
     boocking = get_object_or_404(Movie, id=movie_id)
-
+    # ticket = get_object_or_404(Ticket, id=movie_id, datetime=choice_date_time)
+    print(choice_date_time)
     if 'choices' in request.POST:
         print(request.POST)
         buy_list = [int(i) for i in request.POST.getlist('choices')]
@@ -124,6 +125,7 @@ def get_movies(request):
 def comment(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
 
+    choice_date_time = datetime.datetime.now()
     if 'date' in request.POST and 'time' in request.POST:
         if request.method == 'POST' and len(request.POST) > 0:
             print(request.POST)
@@ -147,7 +149,7 @@ def comment(request, movie_id):
 
             occupied_seats = []
 
-            return redirect('boockingticket', movie_id=movie.id)
+            return redirect('boockingticket', movie_id=movie.id, choice_date_time=choice_date_time)
 
     form = CommentForm(request.POST, instance=movie)
     if request.method == 'POST':
@@ -180,6 +182,7 @@ def comment(request, movie_id):
         'start_date': start_date,
         'end_date': end_date,
         'date': date,
+        'choice_date_time': choice_date_time,
     }
     return render(request, 'movieinfo.html', context)
 
