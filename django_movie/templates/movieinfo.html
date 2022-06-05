@@ -72,6 +72,9 @@
                                     </select>
                                 </div>
                                 <div class="mybutton">
+{#                                    <a type="submit" name="Submit" class="setTime" href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}">#}
+{#                                        View available seats#}
+{#                                    </a>#}
                                     <input type="submit" class="setTime"
                                            href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}"/>
                                 </div>

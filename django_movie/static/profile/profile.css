@@ -164,14 +164,6 @@ ul {
     background-color: #ffffff;
 }
 
-
-
-
-
-
-
-
-
 .body-container {
     background-color: #24262b;
     color: white;
@@ -206,40 +198,6 @@ ul {
     padding: 0px 20px;
 }/*#DIV_1*/
 
-#DIV_1:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_1:after*/
-
-#DIV_1:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_1:before*/
-
 #DIV_2 {
     block-size: 500px;
     border-block-end-color: rgb(21, 21, 21);
@@ -270,38 +228,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
     padding: 20px 18px 32px;
 }/*#DIV_2*/
-
-#DIV_2:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-} /*#DIV_2:after*/
-
-#DIV_2:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-} /*#DIV_2:before*/
 
 #DIV_3 {
     block-size: 200px;
@@ -334,38 +260,6 @@ ul {
     overflow: hidden;
 }/*#DIV_3*/
 
-#DIV_3:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_3:after*/
-
-#DIV_3:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_3:before*/
-
 #PICTURE_4 {
     border-block-end-color: rgb(21, 21, 21);
     border-block-start-color: rgb(21, 21, 21);
@@ -383,38 +277,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#PICTURE_4*/
-
-#PICTURE_4:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#PICTURE_4:after*/
-
-#PICTURE_4:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#PICTURE_4:before*/
 
 #IMG_5 {
     block-size: 200px;
@@ -438,38 +300,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#IMG_5*/
 
-#IMG_5:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#IMG_5:after*/
-
-#IMG_5:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#IMG_5:before*/
-
 #DIV_6 {
     block-size: 169px;
     border-block-end-color: rgb(21, 21, 21);
@@ -492,38 +322,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
     overflow: hidden;
 }/*#DIV_6*/
-
-#DIV_6:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_6:after*/
-
-#DIV_6:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_6:before*/
 
 #A_7 {
     align-items: center;
@@ -566,42 +364,6 @@ ul {
     transition: all 0.25s ease-in-out 0s;
 }/*#A_7*/
 
-#A_7:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_7:after*/
-
-#A_7:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_7:before*/
-
 #SPAN_8 {
     block-size: 17px;
     border-block-end-color: rgb(255, 255, 255);
@@ -642,42 +404,6 @@ ul {
     padding: 3px 6px;
     transition: all 0.25s ease-in-out 0s;
 }/*#SPAN_8*/
-
-#SPAN_8:after {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 11px / 11px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#SPAN_8:after*/
-
-#SPAN_8:before {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 11px / 11px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#SPAN_8:before*/
 
 #A_11 {
     align-items: center;
@@ -721,42 +447,6 @@ ul {
     transition: all 0.25s ease-in-out 0s;
 }/*#A_11*/
 
-#A_11:after {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#A_11:after*/
-
-#A_11:before {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#A_11:before*/
-
 #A_12 {
     align-items: center;
     block-size: 40px;
@@ -796,40 +486,6 @@ ul {
     transition: all 0.25s ease-in-out 0s;
 }/*#A_12*/
 
-#A_12:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_12:after*/
-
-#A_12:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_12:before*/
-
 #DIV_13 {
     border-block-end-color: rgb(21, 21, 21);
     border-block-start-color: rgb(21, 21, 21);
@@ -855,38 +511,6 @@ ul {
     padding: 0px 30px;
 }/*#DIV_13*/
 
-#DIV_13:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_13:after*/
-
-#DIV_13:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_13:before*/
-
 #DIV_14, #DIV_15 {
     border-block-end-color: rgb(21, 21, 21);
     border-block-start-color: rgb(21, 21, 21);
@@ -904,38 +528,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_14, #DIV_15*/
-
-#DIV_14:after, #DIV_15:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_14:after, #DIV_15:after*/
-
-#DIV_14:before, #DIV_15:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_14:before, #DIV_15:before*/
 
 #DIV_16, #DIV_20, #DIV_24, #DIV_225 {
     block-size: 92px;
@@ -961,40 +553,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_16, #DIV_20, #DIV_24, #DIV_225*/
-
-#DIV_16:after, #DIV_20:after, #DIV_24:after, #DIV_225:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_16:after, #DIV_20:after, #DIV_24:after, #DIV_225:after*/
-
-#DIV_16:before, #DIV_20:before, #DIV_24:before, #DIV_225:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_16:before, #DIV_20:before, #DIV_24:before, #DIV_225:before*/
 
 #DIV_17, #DIV_21, #DIV_25, #DIV_226 {
     block-size: 92px;
@@ -1022,38 +580,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_17, #DIV_21, #DIV_25, #DIV_226*/
 
-#DIV_17:after, #DIV_21:after, #DIV_25:after, #DIV_226:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_17:after, #DIV_21:after, #DIV_25:after, #DIV_226:after*/
-
-#DIV_17:before, #DIV_21:before, #DIV_25:before, #DIV_226:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_17:before, #DIV_21:before, #DIV_25:before, #DIV_226:before*/
-
 #DIV_18, #DIV_22, #DIV_26, #DIV_227 {
     block-size: 28px;
     border-block-end-color: rgb(21, 21, 21);
@@ -1077,38 +603,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
     padding: 0px 0px 16px;
 }/*#DIV_18, #DIV_22, #DIV_26, #DIV_227*/
-
-#DIV_18:after, #DIV_22:after, #DIV_26:after, #DIV_227:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_18:after, #DIV_22:after, #DIV_26:after, #DIV_227:after*/
-
-#DIV_18:before, #DIV_22:before, #DIV_26:before, #DIV_227:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_18:before, #DIV_22:before, #DIV_26:before, #DIV_227:before*/
 
 #INPUT_19, #INPUT_23, #INPUT_228 {
     block-size: 40px;
@@ -1136,16 +630,6 @@ ul {
     margin: 0px 0px 24px;
     padding: 1px 2px 1px 16px;
 }/*#INPUT_19, #INPUT_23, #INPUT_228*/
-
-#INPUT_19:after, #INPUT_23:after, #INPUT_228:after {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#INPUT_19:after, #INPUT_23:after, #INPUT_228:after*/
-
-#INPUT_19:before, #INPUT_23:before, #INPUT_228:before {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#INPUT_19:before, #INPUT_23:before, #INPUT_228:before*/
 #DIV_256 {
     display: none;
     width: 460px;
@@ -1180,16 +664,6 @@ ul {
     padding: 1px 2px 1px 16px;
 }/*#INPUT_27*/
 
-#INPUT_27:after {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#INPUT_27:after*/
-
-#INPUT_27:before {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#INPUT_27:before*/
-
 #SELECT_190 {
     appearance: none;
     block-size: 40px;
@@ -1211,16 +685,6 @@ ul {
     padding: 0px 0px 0px 16px;
 }/*#SELECT_190*/
 
-#SELECT_190:after {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#SELECT_190:after*/
-
-#SELECT_190:before {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#SELECT_190:before*/
-
 #SELECT_72, #SELECT_86 {
     appearance: none;
     block-size: 40px;
@@ -1241,16 +705,6 @@ ul {
     margin: 0px 0px 24px;
     padding: 0px 0px 0px 16px;
 }/*#SELECT_72, #SELECT_86*/
-
-#SELECT_72:after, #SELECT_86:after {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#SELECT_72:after, #SELECT_86:after*/
-
-#SELECT_72:before, #SELECT_86:before {
-    box-sizing: border-box;
-    font: 14px Arial;
-}/*#SELECT_72:before, #SELECT_86:before*/
 
 #DIV_71, #DIV_85 {
     block-size: 64px;
@@ -1280,38 +734,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_71, #DIV_85*/
 
-#DIV_71:after, #DIV_85:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_71:after, #DIV_85:after*/
-
-#DIV_71:before, #DIV_85:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_71:before, #DIV_85:before*/
-
 #DIV_229 {
     block-size: 56px;
     border-block-end-color: rgb(21, 21, 21);
@@ -1336,40 +758,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_229*/
-
-#DIV_229:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_229:after*/
-
-#DIV_229:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_229:before*/
 
 #DIV_230 {
     block-size: 56px;
@@ -1397,38 +785,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_230*/
 
-#DIV_230:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_230:after*/
-
-#DIV_230:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_230:before*/
-
 #DIV_231 {
     block-size: 56px;
     border-block-end-color: rgb(21, 21, 21);
@@ -1450,49 +806,11 @@ ul {
     border: 0px none rgb(21, 21, 21);
     font: 600 12px / 12px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
-    padding: 0px 0px 16px;
+    padding: 0px 0px 5px;
     display: flex;
   align-items: center;
   justify-content: space-between;
 }/*#DIV_231*/
-
-#DIV_231:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-}/*#DIV_231:after*/
-
-#DIV_231:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-}/*#DIV_231:before*/
 
 #BUTTON_232 {
     align-items: center;
@@ -1545,45 +863,6 @@ ul {
     transition: all 0.25s ease-out 0s;
 }/*#BUTTON_232*/
 
-#BUTTON_232:after {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    user-select: none;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 12px / 14.4px Arial;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#BUTTON_232:after*/
-
-#BUTTON_232:before {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    user-select: none;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 12px / 14.4px Arial;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#BUTTON_232:before*/
-
-
 #DIV_233 {
     text-align: center;
     justify-content: center;
@@ -1613,40 +892,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_1*/
 
-#DIV_233:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_1:after*/
-
-#DIV_233:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_1:before*/
-
 #DIV_234 {
     block-size: 30px;
     border-block-end-color: rgb(21, 21, 21);
@@ -1674,40 +919,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_2*/
 
-#DIV_234:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_2:after*/
-
-#DIV_234:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_2:before*/
-
 #DIV_235 {
     block-size: 30px;
     border-block-end-color: rgb(21, 21, 21);
@@ -1733,46 +944,6 @@ ul {
     font: 700 24px / 30px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_3*/
-
-#DIV_235:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 700 24px / 30px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_3:after*/
-
-#DIV_235:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: white;
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 700 24px / 30px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_3:before*/
-
-
-
-
-
-
-
-
 
 #DIV_236 {
     block-size: 441px;
@@ -1801,38 +972,6 @@ ul {
     padding: 0px 30px;
 }/*#DIV_236*/
 
-#DIV_236:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_236:after*/
-
-#DIV_236:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_236:before*/
-
 #DIV_237 {
     block-size: 223px;
     border-block-end-color: rgb(21, 21, 21);
@@ -1852,38 +991,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_237*/
-
-#DIV_237:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_237:after*/
-
-#DIV_237:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_237:before*/
 
 #DIV_238 {
     block-size: 36px;
@@ -1905,40 +1012,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_238*/
-
-#DIV_238:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_238:after*/
-
-#DIV_238:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_238:before*/
 
 #DIV_239 {
     block-size: 36px;
@@ -1963,38 +1036,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_239*/
-
-#DIV_239:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_239:after*/
-
-#DIV_239:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_239:before*/
 
 #A_20 {
     align-items: center;
@@ -2038,46 +1079,6 @@ ul {
     transition: all 0.25s ease-in-out 0s;
 }/*#A_20*/
 
-#A_20:after {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#A_20:after*/
-
-#A_20:before {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#A_20:before*/
-
 #A_21 {
     align-items: center;
     block-size: 36px;
@@ -2118,47 +1119,6 @@ ul {
     padding: 0px 20px;
     transition: all 0.25s ease-in-out 0s;
 }/*#A_21*/
-
-
-#A_21:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    text-transform: uppercase;
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_21:after*/
-
-#A_21:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    text-transform: uppercase;
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_21:before*/
 
 #A_22 {
     align-items: center;
@@ -2201,46 +1161,6 @@ ul {
     transition: all 0.25s ease-in-out 0s;
 }/*#A_22*/
 
-#A_22:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    text-transform: uppercase;
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_22:after*/
-
-#A_22:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    text-transform: uppercase;
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(21, 21, 21);
-    font: 600 12px / 12px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#A_22:before*/
-
 #DIV_240 {
     overflow-y: auto;
     overflow-x: hidden;
@@ -2265,38 +1185,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_240*/
 
-#DIV_240:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_240:after*/
-
-#DIV_240:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_240:before*/
-
 #DIV_241 {
     block-size: 157px;
     border-block-end-color: rgb(21, 21, 21);
@@ -2316,38 +1204,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_241*/
-
-#DIV_241:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_241:after*/
-
-#DIV_241:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_241:before*/
 
 #DIV_242 {
     block-size: 157px;
@@ -2372,38 +1228,6 @@ ul {
     padding: 35px 0px;
 }/*#DIV_242*/
 
-#DIV_242:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_242:after*/
-
-#DIV_242:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_242:before*/
-
 #DIV_243 {
     block-size: 87px;
     border-block-end-color: rgb(21, 21, 21);
@@ -2423,38 +1247,6 @@ ul {
     font: 16px / 16px Montserrat, sans-serif;
     outline: rgb(21, 21, 21) none 0px;
 }/*#DIV_243*/
-
-#DIV_243:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_243:after*/
-
-#DIV_243:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_243:before*/
 
 #DIV_244 {
     block-size: 51px;
@@ -2478,40 +1270,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
     padding: 0px 0px 16px;
 }/*#DIV_244*/
-
-#DIV_244:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_244:after*/
-
-#DIV_244:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    display: block;
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#DIV_244:before*/
 
 #I_20 {
     block-size: 35px;
@@ -2541,38 +1299,6 @@ ul {
     outline: rgb(21, 21, 21) none 0px;
 }/*#I_20*/
 
-#I_20:after {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: italic 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#I_20:after*/
-
-#I_20:before {
-    border-block-end-color: rgb(21, 21, 21);
-    border-block-start-color: rgb(21, 21, 21);
-    border-inline-end-color: rgb(21, 21, 21);
-    border-inline-start-color: rgb(21, 21, 21);
-    box-sizing: border-box;
-    caret-color: rgb(21, 21, 21);
-    color: rgb(21, 21, 21);
-    column-rule-color: rgb(21, 21, 21);
-    text-decoration: none solid rgb(21, 21, 21);
-    text-emphasis-color: rgb(21, 21, 21);
-    border: 0px none rgb(21, 21, 21);
-    font: italic 16px / 16px Montserrat, sans-serif;
-    outline: rgb(21, 21, 21) none 0px;
-}/*#I_20:before*/
-
 #DIV_245 {
     block-size: 27px;
     border-block-end-color: rgb(170, 170, 170);
@@ -2600,38 +1326,6 @@ ul {
     margin: 8px 0px 0px;
     outline: rgb(170, 170, 170) none 0px;
 }/*#DIV_245*/
-
-#DIV_245:after {
-    border-block-end-color: rgb(170, 170, 170);
-    border-block-start-color: rgb(170, 170, 170);
-    border-inline-end-color: rgb(170, 170, 170);
-    border-inline-start-color: rgb(170, 170, 170);
-    box-sizing: border-box;
-    caret-color: rgb(170, 170, 170);
-    color: rgb(170, 170, 170);
-    column-rule-color: rgb(170, 170, 170);
-    text-decoration: none solid rgb(170, 170, 170);
-    text-emphasis-color: rgb(170, 170, 170);
-    border: 0px none rgb(170, 170, 170);
-    font: 13px / 13px Montserrat, sans-serif;
-    outline: rgb(170, 170, 170) none 0px;
-}/*#DIV_245:after*/
-
-#DIV_245:before {
-    border-block-end-color: rgb(170, 170, 170);
-    border-block-start-color: rgb(170, 170, 170);
-    border-inline-end-color: rgb(170, 170, 170);
-    border-inline-start-color: rgb(170, 170, 170);
-    box-sizing: border-box;
-    caret-color: rgb(170, 170, 170);
-    color: rgb(170, 170, 170);
-    column-rule-color: rgb(170, 170, 170);
-    text-decoration: none solid rgb(170, 170, 170);
-    text-emphasis-color: rgb(170, 170, 170);
-    border: 0px none rgb(170, 170, 170);
-    font: 13px / 13px Montserrat, sans-serif;
-    outline: rgb(170, 170, 170) none 0px;
-}/*#DIV_14:before*/
 
 #BUTTON_15 {
     align-items: center;
@@ -2676,46 +1370,6 @@ ul {
     padding: 0px 20px;
     transition: all 0.25s ease-in-out 0s;
 }/*#BUTTON_15*/
-
-#BUTTON_15:after {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 12px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#BUTTON_15:after*/
-
-#BUTTON_15:before {
-    border-block-end-color: rgb(255, 255, 255);
-    border-block-start-color: rgb(255, 255, 255);
-    border-inline-end-color: rgb(255, 255, 255);
-    border-inline-start-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    caret-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    column-rule-color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-emphasis-color: rgb(255, 255, 255);
-    user-select: none;
-    white-space: nowrap;
-    border: 0px none rgb(255, 255, 255);
-    font: 12px Montserrat, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#BUTTON_15:before*/
 
 
 .cardWrap {

@@ -41,16 +41,20 @@ def logoutPage(request):
 
 
 def profile(request):
-    u_form = UserUpdateForm(instance=request.user)
+    # u_form = UserUpdateForm(instance=request.user)
+
     all_ticket = Ticket.objects.filter(user_login=request.user.username)
+
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
+        print('aaaaaaaaaaaaaaaaaaa')
         if u_form.is_valid():
+            print('bbbbbbbbbbbbbbbbbbbb')
             u_form.save()
             messages.success(request, f'Your account has been updated!')
             return redirect('profile')
-    # else:
-    #     u_form = UserUpdateForm(instance=request.user)
+    else:
+        u_form = UserUpdateForm(instance=request.user)
 
     context = {
         'u_form': u_form,

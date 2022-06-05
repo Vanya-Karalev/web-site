@@ -27,8 +27,8 @@
                     </picture>
                 </div>
                 <div id="DIV_6">
-                    <a href="#" id="A_7" class="myTicketsButton">Мои билеты<span id="SPAN_8">{{ all_ticket.count }}</span></a>
-                    <a href="#" id="A_11" class="profileButton">Профиль</a>
+                    <a href="" id="A_7" class="myTicketsButton">Мои билеты<span id="SPAN_8">{{ all_ticket.count }}</span></a>
+                    <a href="" id="A_11" class="profileButton">Профиль</a>
                 </div>
             </div>
             <form method="POST">
@@ -68,7 +68,7 @@
                                             Сохранить данные
                                         </button>
                                         {% if not request.user.is_superuser %}
-                                            <button id="BUTTON_232" style="background-color: red">
+                                            <button id="BUTTON_232" style="background: rgb(238, 45, 55) none repeat scroll 0% 0% / auto padding-box border-box;">
                                                 Delete account
                                             </button>
                                         {% endif %}
