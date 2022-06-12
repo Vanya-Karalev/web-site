@@ -3,7 +3,7 @@ import requests
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
-from movies.models import Movie, Comment, Ticket, Seat
+from movies.models import Movie, Comment, Ticket, Seat, Genre
 from .forms import CommentForm
 import datetime
 import pytz
@@ -40,6 +40,7 @@ def boockingticket(request, movie_id, choice_date_time):
         'boocking': boocking,
         'movie': movie,
         'occupied_seats': occupied_seats,
+        'choice_date_time': choice_date_time
     }
 
     return render(request, 'boockingticket.html', context)
@@ -101,13 +102,16 @@ def get_movies(request):
                         start_date=datetime.date(int(film_date[0]), int(film_date[1]), int(film_date[2])),
                         end_date=datetime.date(int(film_date[0]), int(film_date[1]), int(film_date[2])) + relativedelta(
                             months=+1),
-                        # genres=main_response['genres'],
                         movie_length=main_response.get('filmLength', 'Unknown'),
                         category=main_response.get('ratingAgeLimits', ''),
                         price=10,
                         film_id=film_id,
                     )
-
+                    # for i in main_response['genres']:
+                    #     genre = Genre(name=i['genre'])
+                    #     if not Genre.objects.filter(name=genre).exists():
+                    #         genre.save()
+                    #     model.genres.add(genre)
                 else:
                     model = Movie.objects.filter(film_id=film_id).update(
                         title=main_response.get('nameRu', ''),
@@ -117,12 +121,16 @@ def get_movies(request):
                         start_date=datetime.date(int(film_date[0]), int(film_date[1]), int(film_date[2])),
                         end_date=datetime.date(int(film_date[0]), int(film_date[1]), int(film_date[2])) + relativedelta(
                             months=+1),
-                        # genres=main_response['genres'],
                         movie_length=main_response.get('filmLength', '00:00'),
                         category=main_response.get('ratingAgeLimits', ''),
                         price=10,
                         film_id=film_id,
                     )
+                    # for i in main_response['genres']:
+                    #     genre = Genre(name=i['genre'])
+                    #     if not Genre.objects.filter(name=genre).exists():
+                    #         genre.save()
+                    #     model.genres.add(genre)
 
         settings.NEED_TO_LOAD_FILMS = False
 

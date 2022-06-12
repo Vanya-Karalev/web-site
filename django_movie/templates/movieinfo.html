@@ -30,27 +30,31 @@
                             </div>
                             <div class="row table-about">
                                 <div class="table-about__box">
-                                    <div class="table-about__header">Даты показа:</div>
+                                    <div class="table-about__header">Show dates:</div>
                                     <div class="table-about__text">
                                         <span>{{ movie.start_date }} - {{ movie.end_date }}</span>
                                     </div>
                                 </div>
                                 <div class="table-about__box">
-                                    <div class="table-about__header">Длительность:</div>
-                                    <div class="table-about__text">{{ movie.movie_length }} мин.</div>
+                                    <div class="table-about__header">Duration:</div>
+                                    <div class="table-about__text">{{ movie.movie_length }} min.</div>
                                 </div>
                                 <div class="table-about__box">
-                                    <div class="table-about__header">Жанр:</div>
-                                    <div class="table-about__text"><span>Боевик,
-                                        </span><span>Приключения, </span><span>Premium</span></div>
-                                </div>
-                                <div class="table-about__box">
-                                    <div class="table-about__header">Стоимость:</div>
-                                    <div class="table-about__text">{{ movie.price }}р.
+                                    <div class="table-about__header">Genre:</div>
+                                    <div class="table-about__text">
+{#                                        {% for genre in movie.genres %}#}
+{#                                            <span>{{ genre }}, </span>#}
+{#                                        {% endfor %}#}
+                                        <span>Боевик, </span><span>Приключения, </span><span>Premium</span>
                                     </div>
                                 </div>
                                 <div class="table-about__box">
-                                    <div class="table-about__header">Возрастные ограничения:</div>
+                                    <div class="table-about__header">Price:</div>
+                                    <div class="table-about__text">${{ movie.price }}.
+                                    </div>
+                                </div>
+                                <div class="table-about__box">
+                                    <div class="table-about__header">Age restrictions:</div>
                                     <div class="table-about__text">{{ movie.category }}</div>
                                 </div>
                             </div>
@@ -64,11 +68,11 @@
                                            value="{{ date }}" class="form-control dateTime" style="width: 300px">
                                 </div>
                                 <div class="form-group">
-                                    <select style="width: 300px" name="time" id="time">
-                                        <option value="11:00" name="time">10:00</option>
-                                        <option value="15:00" name="time">14:00</option>
-                                        <option value="19:00" name="time">18:00</option>
-                                        <option value="23:00" name="time">22:00</option>
+                                    <select style="width: 300px" name="time" id="time" class="timeValue">
+                                        <option value="11:00" name="time" class="timeValue">10:00</option>
+                                        <option value="15:00" name="time" class="timeValue">14:00</option>
+                                        <option value="19:00" name="time" class="timeValue">18:00</option>
+                                        <option value="23:00" name="time" class="timeValue">22:00</option>
                                     </select>
                                 </div>
                                 <div class="mybutton">
@@ -89,7 +93,7 @@
 
                                 {% if request.user.is_authenticated %}
                                     <div class="reviews__form">
-                                        <div class="reviews__header">Отзывы<span
+                                        <div class="reviews__header">Reviews<span
                                                 class="reviews__count"> {{ commentary.count }}</span></div>
                                         <form method="POST">
                                             {% csrf_token %}
@@ -98,7 +102,7 @@
                                             </div>
                                             <div class="row">
                                                 <button type="submit" name="Submit" class="button button_primary">
-                                                    Отправить отзыв
+                                                    Send feedback
                                                 </button>
                                             </div>
                                         </form>
