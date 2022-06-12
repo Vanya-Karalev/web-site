@@ -12,13 +12,6 @@
         <div id="DIV_233">
             Personal account
         </div>
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
         <div id="DIV_1">
             <div id="DIV_2">
                 <div id="DIV_3">
@@ -68,12 +61,6 @@
                                         <button id="BUTTON_232" type="submit">
                                             Save data
                                         </button>
-                                        {% if not request.user.is_superuser %}
-                                            <button id="BUTTON_232"
-                                                    style="background: rgb(238, 45, 55) none repeat scroll 0% 0% / auto padding-box border-box;">
-                                                Delete account
-                                            </button>
-                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -103,9 +90,9 @@
                                                     You don't have actual tickets.
                                                 </div>
                                             </div>
-                                            {#                                            <button id="BUTTON_15" href="{% url 'index' %}">#}
-                                            {#                                                Перейти к афише#}
-                                            {#                                            </button>#}
+                                            <button id="BUTTON_15" href="{% url 'index' %}">
+                                                Go to the movies
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

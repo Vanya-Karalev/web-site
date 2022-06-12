@@ -15,7 +15,7 @@ class Movie(models.Model):
     poster = models.URLField('Poster', null=True, blank=True, max_length=1000)
     start_date = models.DateField('Premiere beginning', null=True, blank=True)
     end_date = models.DateField('Premiere ending', null=True, blank=True)
-    genres = models.ManyToManyField(Genre, related_name='genres')
+    genres = models.ManyToManyField(Genre)
     movie_length = models.PositiveIntegerField('Movie length', null=True, blank=True)
     category = models.CharField('Movie category', null=True, blank=True, default='', max_length=250)
     price = models.PositiveIntegerField('Movie price', default=10)

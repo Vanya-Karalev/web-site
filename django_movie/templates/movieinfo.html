@@ -42,10 +42,10 @@
                                 <div class="table-about__box">
                                     <div class="table-about__header">Genre:</div>
                                     <div class="table-about__text">
-{#                                        {% for genre in movie.genres %}#}
-{#                                            <span>{{ genre }}, </span>#}
-{#                                        {% endfor %}#}
-                                        <span>Боевик, </span><span>Приключения, </span><span>Premium</span>
+                                        {% for genre in movie.genres.all %}
+                                            <span>{{ genre.name }}, </span>
+                                        {% endfor %}
+{#                                        <span>Боевик, </span><span>Приключения, </span><span>Premium</span>#}
                                     </div>
                                 </div>
                                 <div class="table-about__box">

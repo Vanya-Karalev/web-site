@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class UserRegisterForm(UserCreationForm):
@@ -29,7 +29,7 @@ class UserRegisterForm(UserCreationForm):
         }
 
 
-class UserUpdateForm(UserCreationForm):
+class UserUpdateForm(UserChangeForm):
     email = forms.CharField(label='Email', widget=forms.EmailInput(attrs={'id': 'INPUT_19'}))
     first_name = forms.CharField(label='First name', widget=forms.TextInput(attrs={'id': 'INPUT_19'}))
     last_name = forms.CharField(label='Last name', widget=forms.TextInput(attrs={'id': 'INPUT_19'}))

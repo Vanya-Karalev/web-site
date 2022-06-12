@@ -94,7 +94,7 @@ def get_movies(request):
                     main_response['shortDescription'] = main_response['description'][:150]
 
                 if not Movie.objects.filter(film_id=film_id).exists():
-                    model = Movie.objects.create(
+                    film: Movie = Movie.objects.create(
                         title=main_response.get('nameRu', ''),
                         small_description=main_response['shortDescription'][:150],
                         description=main_response['description'],
@@ -107,13 +107,16 @@ def get_movies(request):
                         price=10,
                         film_id=film_id,
                     )
-                    # for i in main_response['genres']:
-                    #     genre = Genre(name=i['genre'])
-                    #     if not Genre.objects.filter(name=genre).exists():
-                    #         genre.save()
-                    #     model.genres.add(genre)
+                    for i in main_response['genres']:
+                        genre = Genre(name=i['genre'])
+                        if not Genre.objects.filter(name=genre).exists():
+                            genre.save()
+                            film.genres.add(genre)
+                        else:
+                            genre_ex = Genre.objects.filter(name=genre).get()
+                            film.genres.add(genre_ex)
                 else:
-                    model = Movie.objects.filter(film_id=film_id).update(
+                    Movie.objects.filter(film_id=film_id).update(
                         title=main_response.get('nameRu', ''),
                         small_description=main_response['shortDescription'][:150],
                         description=main_response['description'],
@@ -126,15 +129,21 @@ def get_movies(request):
                         price=10,
                         film_id=film_id,
                     )
-                    # for i in main_response['genres']:
-                    #     genre = Genre(name=i['genre'])
-                    #     if not Genre.objects.filter(name=genre).exists():
-                    #         genre.save()
-                    #     model.genres.add(genre)
+
+                    film = Movie.objects.filter(film_id=film_id).first()
+
+                    for i in main_response['genres']:
+                        genre = Genre(name=i['genre'])
+                        if not Genre.objects.filter(name=genre).exists():
+                            genre.save()
+                            film.genres.add(genre)
+                        else:
+                            genre_ex = Genre.objects.filter(name=genre).get()
+                            film.genres.add(genre_ex)
 
         settings.NEED_TO_LOAD_FILMS = False
 
-    movies = Movie.objects.all().order_by('-title')
+    movies = Movie.objects.all().order_by('-film_id')
     return render(request, 'index.html', {"movie_list": movies})
 
 
