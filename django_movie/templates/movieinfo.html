@@ -45,7 +45,7 @@
                                         {% for genre in movie.genres.all %}
                                             <span>{{ genre.name }}, </span>
                                         {% endfor %}
-{#                                        <span>Боевик, </span><span>Приключения, </span><span>Premium</span>#}
+                                        {#                                        <span>Боевик, </span><span>Приключения, </span><span>Premium</span>#}
                                     </div>
                                 </div>
                                 <div class="table-about__box">
@@ -59,31 +59,32 @@
                                 </div>
                             </div>
 
-
-                            <form method="POST">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <label for="inputDate">Choose date and time</label>
-                                    <input id="date" name="date" type="date" min="{{ start_date }}" max="{{ end_date }}"
-                                           value="{{ date }}" class="form-control dateTime" style="width: 300px">
-                                </div>
-                                <div class="form-group">
-                                    <select style="width: 300px" name="time" id="time" class="timeValue">
-                                        <option value="11:00" name="time" class="timeValue">10:00</option>
-                                        <option value="15:00" name="time" class="timeValue">14:00</option>
-                                        <option value="19:00" name="time" class="timeValue">18:00</option>
-                                        <option value="23:00" name="time" class="timeValue">22:00</option>
-                                    </select>
-                                </div>
-                                <div class="mybutton">
-{#                                    <a type="submit" name="Submit" class="setTime" href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}">#}
-{#                                        View available seats#}
-{#                                    </a>#}
-                                    <input type="submit" class="setTime"
-                                           href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}"/>
-                                </div>
-                            </form>
-
+                            {% if date <= end_date %}
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="inputDate">Choose date and time</label>
+                                        <input id="date" name="date" type="date" min="{{ start_date }}"
+                                               max="{{ end_date }}"
+                                               value="{{ date }}" class="form-control dateTime" style="width: 300px">
+                                    </div>
+                                    <div class="form-group">
+                                        <select style="width: 300px" name="time" id="time" class="timeValue">
+                                            <option value="11:00" name="time" class="timeValue">10:00</option>
+                                            <option value="15:00" name="time" class="timeValue">14:00</option>
+                                            <option value="19:00" name="time" class="timeValue">18:00</option>
+                                            <option value="23:00" name="time" class="timeValue">22:00</option>
+                                        </select>
+                                    </div>
+                                    <div class="mybutton">
+                                        {#                                    <a type="submit" name="Submit" class="setTime" href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}">#}
+                                        {#                                        View available seats#}
+                                        {#                                    </a>#}
+                                        <input type="submit" class="setTime"
+                                               href="{% url 'boockingticket' movie_id=movie.id choice_date_time=choice_date_time %}"/>
+                                    </div>
+                                </form>
+                            {% endif %}
 
                             <div class="event-page__description">
                                 <p style="text-align:justify"><br>{{ movie.description }}.</p>
