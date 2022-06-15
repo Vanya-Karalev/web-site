@@ -7,7 +7,7 @@ from movies.models import Movie, Comment, Ticket, Seat, Genre
 from .forms import CommentForm
 import datetime
 import pytz
-from movies.mail_sender import *
+from movies.tasks import *
 
 
 def is_ajax(request):
@@ -31,8 +31,9 @@ def boockingticket(request, movie_id, choice_date_time):
                                       user_login=request.user.username, movie=movie, seat=buying_ticket,
                                       datetime=choice_date_time)
             Seat.objects.create(movie=movie, datetime=choice_date_time, seat=buying_ticket)
-        send(request.user.first_name + ' ' + request.user.last_name, request.user.email, movie.title,
-             buy_list, choice_date_time)
+
+        send.s(request.user.first_name + ' ' + request.user.last_name, request.user.email, movie.title,
+               buy_list, choice_date_time)
         return redirect('movieinfo', movie_id=movie.id)
 
     occupied_seats = []

@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'django_movie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'localhost',
+        'PORT': 54322,
+        'USER': 'saltyclone141',
+        'PASSWORD': "Bbnn4pahe3352",
+        'NAME': "db02"
     }
 }
 
@@ -131,3 +135,11 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'djangomoviebooking@gmail.com'
 EMAIL_HOST_PASSWORD = 'vewncrybaihsvtzv'
 EMAIL_PORT = 587
+
+# CELERY STUFF
+BROKER_URL = 'redis://localhost:5050'
+CELERY_RESULT_BACKEND = 'redis://localhost:5050'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Europe/London'
