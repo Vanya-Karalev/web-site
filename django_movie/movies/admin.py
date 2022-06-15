@@ -1,3 +1,4 @@
+"""Registration models in admin panel"""
 from django.contrib import admin
 from .models import Genre, Movie, Comment, Ticket, Seat
 

@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 class UserRegisterForm(UserCreationForm):
+    """Registration form"""
     username = forms.CharField(label='Login', widget=forms.TextInput(attrs={'class': 'form-input'}))
     email = forms.CharField(label='Email', widget=forms.EmailInput(attrs={'class': 'form-input'}))
     first_name = forms.CharField(label='First name', widget=forms.TextInput(attrs={'class': 'form-input'}))
@@ -30,6 +31,7 @@ class UserRegisterForm(UserCreationForm):
 
 
 class UserUpdateForm(UserChangeForm):
+    """Change info account form"""
     email = forms.CharField(label='Email', widget=forms.EmailInput(attrs={'id': 'INPUT_19'}))
     first_name = forms.CharField(label='First name', widget=forms.TextInput(attrs={'id': 'INPUT_19'}))
     last_name = forms.CharField(label='Last name', widget=forms.TextInput(attrs={'id': 'INPUT_19'}))

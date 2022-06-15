@@ -10,10 +10,12 @@ import pytz
 
 
 def is_ajax(request):
+    """Checking the function for ajax"""
     return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
 
 
 def boockingticket(request, movie_id, choice_date_time):
+    """Booking ticket"""
     movie = get_object_or_404(Movie, id=movie_id)
     boocking = get_object_or_404(Movie, id=movie_id)
     print(choice_date_time)
@@ -47,6 +49,7 @@ def boockingticket(request, movie_id, choice_date_time):
 
 
 def get_movies(request):
+    """Get movies from API"""
     if settings.NEED_TO_LOAD_FILMS:
         headers = {
             'Content-Type': 'application/json',
@@ -148,6 +151,7 @@ def get_movies(request):
 
 
 def comment(request, movie_id):
+    """Leave a comment"""
     movie = get_object_or_404(Movie, id=movie_id)
 
     choice_date_time = datetime.datetime.now()
@@ -212,6 +216,7 @@ def comment(request, movie_id):
 
 
 def search_results(request):
+    """Search films"""
     if is_ajax(request=request):
         res = None
         movie = request.POST.get('movie')

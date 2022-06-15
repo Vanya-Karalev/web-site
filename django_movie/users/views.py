@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 
 
 def registerPage(request):
+    """Registration function"""
     form = UserRegisterForm()
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -19,6 +20,7 @@ def registerPage(request):
 
 
 def loginPage(request):
+    """Login function"""
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -36,11 +38,13 @@ def loginPage(request):
 
 
 def logoutPage(request):
+    """Logout function"""
     logout(request)
     return redirect('index')
 
 
 def profile(request):
+    """Update profile function"""
     all_ticket = Ticket.objects.filter(user_login=request.user.username)
 
     if request.method == 'POST':
