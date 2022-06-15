@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0!7z0bhorgo&+^p^fa%lzunakv89m-4+y$hz6t!)v+t87*v%#u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['django-movie-booking.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -125,3 +125,9 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 NEED_TO_LOAD_FILMS = False
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'djangomoviebooking@gmail.com'
+EMAIL_HOST_PASSWORD = 'vewncrybaihsvtzv'
+EMAIL_PORT = 587
