@@ -77,11 +77,10 @@ WSGI_APPLICATION = 'django_movie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
-        'PORT': 54322,
-        'USER': 'saltyclone141',
-        'PASSWORD': "Bbnn4pahe3352",
-        'NAME': "db02"
+        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
     }
 }
 
@@ -137,8 +136,8 @@ EMAIL_HOST_PASSWORD = 'vewncrybaihsvtzv'
 EMAIL_PORT = 587
 
 # CELERY STUFF
-BROKER_URL = 'redis://localhost:5050'
-CELERY_RESULT_BACKEND = 'redis://localhost:5050'
+BROKER_URL = 'redis://redis:6379'
+CELERY_RESULT_BACKEND = 'redis://redis:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
