@@ -7,7 +7,7 @@ from django_movie.settings import EMAIL_HOST_USER
 def send(user_login, email, movie_title, seat, date_time):
     send_mail(
         f'Booking a movie ticket: {movie_title}',
-        f'Hello, {user_login}! \nYou have booked {seat} seats for the movie:"{movie_title}", date and time:'
+        f'Hello, User! \nYou have booked {seat} seats for the movie:"{movie_title}", date and time:'
         f'{date_time}',
         EMAIL_HOST_USER,
         [email],
